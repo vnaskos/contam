@@ -16,6 +16,7 @@ public class Business {
   public String description;
   public double longitude;
   public double latitude;
+  public int postal_code;
   
   public Business(){
       
