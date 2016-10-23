@@ -21,9 +21,9 @@ public interface BusinessDAO extends MainDAO {
 
     public List<Business> getBusinessByAddress(String address);
 
-    public boolean updateBusiness(Business business);
+    public void updateBusiness(Business business);
 
-    public boolean deleteBusiness(Business business);
+    public void deleteBusiness(Business business);
 
     public void addBusiness(Business business);
 }

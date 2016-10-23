@@ -81,13 +81,42 @@ public class BusinessDAOImpl implements BusinessDAO {
     }
 
     @Override
-    public boolean updateBusiness(Business business) {
-        return false;
+    public void updateBusiness(Business business) {
+        try {
+            Connection conn = DBHelper.getConnection();
+            
+            String query = "UPDATE business SET address = ?,description = ?,longitude = ?,latitude = ?,postalCode = ? WHERE name = ?";
+            PreparedStatement stmt = conn.prepareStatement(query);
+            stmt.setString(1, business.getAddress());
+            stmt.setString(2, business.getDescription());
+            stmt.setDouble(3, business.getLongitude());
+            stmt.setDouble(4, business.getLatitude());
+            stmt.setInt(5, business.getPostalCode());
+            stmt.setString(6, business.getName());
+            stmt.execute();
+            
+            stmt.close();
+            conn.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(BusinessDAOImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @Override
-    public boolean deleteBusiness(Business business) {
-        return false;
+    public void deleteBusiness(Business business) {
+          try {
+            Connection conn = DBHelper.getConnection();
+            
+            String query = "DELETE FROM business WHERE name = ?";
+            PreparedStatement stmt = conn.prepareStatement(query);
+            stmt.setString(1, business.getName());
+            stmt.execute();
+            
+            stmt.close();
+            conn.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(BusinessDAOImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @Override
