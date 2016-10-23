@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="assets/css/owl.carousel.css" type="text/css">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
 
-    <title>Zoner</title>
+    <title>Contam.gr</title>
 
 </head>
 
@@ -248,7 +248,7 @@
                         </div>
                         <div class="overlay">
                             <div class="info">
-                                <div class="tag price">$ 11,000</div>
+                                
                                 <h3>3398 Lodgeville Road</h3>
                                 <figure>Golden Valley, MN 55427</figure>
                             </div>
@@ -280,7 +280,7 @@
                         </div>
                         <div class="overlay">
                             <div class="info">
-                                <div class="tag price">$ 16,000</div>
+                                
                                 <h3>987 Cantebury Drive</h3>
                                 <figure>Chicago, IL 60610 </figure>
                             </div>
@@ -312,7 +312,7 @@
                         </div>
                         <div class="overlay">
                             <div class="info">
-                                <div class="tag price">$ 28,500</div>
+                                
                                 <h3>1866 Clement Street</h3>
                                 <figure>Atlanta, GA 30303 </figure>
                             </div>
@@ -344,7 +344,7 @@
                         </div>
                         <div class="overlay">
                             <div class="info">
-                                <div class="tag price">$ 268,800</div>
+                              
                                 <h3>2186 Rinehart Road</h3>
                                 <figure>Doral, FL 33178 </figure>
                             </div>
@@ -376,7 +376,7 @@
                         </div>
                         <div class="overlay">
                             <div class="info">
-                                <div class="tag price">$ 28,500</div>
+                                
                                 <h3>1866 Clement Street</h3>
                                 <figure>Atlanta, GA 30303 </figure>
                             </div>
@@ -408,7 +408,7 @@
                         </div>
                         <div class="overlay">
                             <div class="info">
-                                <div class="tag price">$ 28,500</div>
+                               
                                 <h3>1866 Clement Street</h3>
                                 <figure>Atlanta, GA 30303 </figure>
                             </div>
@@ -444,14 +444,14 @@
                 <div class="row">
                     <div class="col-md-3 col-sm-6">
                         <div class="property">
-                            <figure class="tag status">For Sale</figure>
+                            
                             <a href="property-detail.html">
                                 <div class="property-image">
                                     <img alt="" src="assets/img/properties/property-06.jpg">
                                 </div>
                                 <div class="overlay">
                                     <div class="info">
-                                        <div class="tag price">$ 11,000</div>
+                                      
                                         <h3>3398 Lodgeville Road</h3>
                                         <figure>Golden Valley, MN 55427</figure>
                                     </div>
@@ -479,14 +479,14 @@
                     </div><!-- /.col-md-3 -->
                     <div class="col-md-3 col-sm-6">
                         <div class="property">
-                            <figure class="tag status">For Sale</figure>
+                           
                             <a href="property-detail.html">
                                 <div class="property-image">
                                     <img alt="" src="assets/img/properties/property-04.jpg">
                                 </div>
                                 <div class="overlay">
                                     <div class="info">
-                                        <div class="tag price">$ 38,000</div>
+                                        
                                         <h3>2186 Rinehart Road</h3>
                                         <figure>Doral, FL 33178 </figure>
                                     </div>
@@ -520,7 +520,7 @@
                                 </div>
                                 <div class="overlay">
                                     <div class="info">
-                                        <div class="tag price">$ 325,000</div>
+                                        
                                         <h3>3705 Brighton Circle Road</h3>
                                         <figure>Glenwood, MN 56334</figure>
                                     </div>
@@ -548,14 +548,14 @@
                     </div><!-- /.col-md-3 -->
                     <div class="col-md-3 col-sm-6">
                         <div class="property">
-                            <figure class="tag status">For Rent</figure>
+                           
                             <a href="property-detail.html">
                                 <div class="property-image">
                                     <img alt="" src="assets/img/properties/property-08.jpg">
                                 </div>
                                 <div class="overlay">
                                     <div class="info">
-                                        <div class="tag price">$ 16,000</div>
+                                        
                                         <h3>362 Lynn Ogden Lane</h3>
                                         <figure>Galveston, TX 77550</figure>
                                     </div>
@@ -630,14 +630,14 @@
                 <div class="row">
                     <div class="col-md-3 col-sm-6">
                         <div class="property">
-                            <figure class="tag status">For Rent</figure>
+                            
                             <a href="property-detail.html">
                                 <div class="property-image">
                                     <img alt="" src="assets/img/properties/property-09.jpg">
                                 </div>
                                 <div class="overlay">
                                     <div class="info">
-                                        <div class="tag price">$ 11,000</div>
+                                        
                                         <h3>3398 Lodgeville Road</h3>
                                         <figure>Golden Valley, MN 55427</figure>
                                     </div>
@@ -665,14 +665,14 @@
                     </div><!-- /.col-md-3 -->
                     <div class="col-md-3 col-sm-6">
                         <div class="property">
-                            <figure class="tag status">Under Offer</figure>
+                           
                             <a href="property-detail.html">
                                 <div class="property-image">
                                     <img alt="" src="assets/img/properties/property-03.jpg">
                                 </div>
                                 <div class="overlay">
                                     <div class="info">
-                                        <div class="tag price">$ 38,000</div>
+                                       
                                         <h3>2186 Rinehart Road</h3>
                                         <figure>Doral, FL 33178 </figure>
                                     </div>
@@ -706,7 +706,7 @@
                                 </div>
                                 <div class="overlay">
                                     <div class="info">
-                                        <div class="tag price">$ 325,000</div>
+                                        
                                         <h3>3705 Brighton Circle Road</h3>
                                         <figure>Glenwood, MN 56334</figure>
                                     </div>
@@ -734,14 +734,14 @@
                     </div><!-- /.col-md-3 -->
                     <div class="col-md-3 col-sm-6">
                         <div class="property">
-                            <figure class="tag status">For Sale</figure>
+                            
                             <a href="property-detail.html">
                                 <div class="property-image">
                                     <img alt="" src="assets/img/properties/property-01.jpg">
                                 </div>
                                 <div class="overlay">
                                     <div class="info">
-                                        <div class="tag price">$ 16,000</div>
+                                        
                                         <h3>362 Lynn Ogden Lane</h3>
                                         <figure>Galveston, TX 77550</figure>
                                     </div>
@@ -777,7 +777,7 @@
                                 </div>
                                 <div class="overlay">
                                     <div class="info">
-                                        <div class="tag price">$ 18,000</div>
+                                       
                                         <h3>2506 B Street</h3>
                                         <figure>New Brighton, MN 55112</figure>
                                     </div>
@@ -805,14 +805,14 @@
                     </div><!-- /.col-md-3 -->
                     <div class="col-md-3 col-sm-6">
                         <div class="property">
-                            <figure class="tag status">For Rent</figure>
+                           
                             <a href="property-detail.html">
                                 <div class="property-image">
                                     <img alt="" src="assets/img/properties/property-12.jpg">
                                 </div>
                                 <div class="overlay">
                                     <div class="info">
-                                        <div class="tag price">$ 136,000</div>
+                                        
                                         <h3>3990 Late Avenue</h3>
                                         <figure>Kingfisher, OK 73750</figure>
                                     </div>
@@ -846,7 +846,7 @@
                                 </div>
                                 <div class="overlay">
                                     <div class="info">
-                                        <div class="tag price">$ 12,680</div>
+                                        
                                         <h3>297 Marie Street</h3>
                                         <figure>Towson, MD 21204 </figure>
                                     </div>
@@ -880,7 +880,7 @@
                                 </div>
                                 <div class="overlay">
                                     <div class="info">
-                                        <div class="tag price">$ 12,800</div>
+                                        
                                         <h3>64 Timberbrook Lane</h3>
                                         <figure>Denver, CO 80202</figure>
                                     </div>
@@ -964,53 +964,30 @@
                         <div class="col-md-3 col-sm-3">
                             <article>
                                 <h3>About Us</h3>
-                                <p>Vel fermentum ipsum. Suspendisse quis molestie odio. Interdum et malesuada fames ac ante ipsum
-                                    primis in faucibus. Quisque aliquet a metus in aliquet. Praesent ut turpis posuere, commodo odio
-                                    id, ornare tortor
+                                <p>Contam.gr is a   platform which  provides detailed,
+                                geolocated information for all  kinds of businesses  in Greece. 
+                                It has become unquestionably the No1 local search engine in Greece. 
+                                Contam.gr' s  intelligent and flexible search engine, 
+                                provides helpful local information to ready to 
+                                buy customers and is definitely a necessary vehicle for anyone.
                                 </p>
                                 <hr>
                                 <a href="#" class="link-arrow">Read More</a>
                             </article>
                         </div><!-- /.col-sm-3 -->
                         <div class="col-md-3 col-sm-3">
-                            <article>
-                                <h3>Recent Properties</h3>
-                                <div class="property small">
-                                    <a href="property-detail.html">
-                                        <div class="property-image">
-                                            <img alt="" src="assets/img/properties/property-06.jpg">
-                                        </div>
-                                    </a>
-                                    <div class="info">
-                                        <a href="property-detail.html"><h4>2186 Rinehart Road</h4></a>
-                                        <figure>Doral, FL 33178 </figure>
-                                        <div class="tag price">$ 72,000</div>
-                                    </div>
-                                </div><!-- /.property -->
-                                <div class="property small">
-                                    <a href="property-detail.html">
-                                        <div class="property-image">
-                                            <img alt="" src="assets/img/properties/property-09.jpg">
-                                        </div>
-                                    </a>
-                                    <div class="info">
-                                        <a href="property-detail.html"><h4>2479 Murphy Court</h4></a>
-                                        <figure>Minneapolis, MN 55402</figure>
-                                        <div class="tag price">$ 36,000</div>
-                                    </div>
-                                </div><!-- /.property -->
-                            </article>
+                         
                         </div><!-- /.col-sm-3 -->
                         <div class="col-md-3 col-sm-3">
                             <article>
                                 <h3>Contact</h3>
                                 <address>
-                                    <strong>Your Company</strong><br>
-                                    4877 Spruce Drive<br>
-                                    West Newton, PA 15089
+                                    <strong>Contam.gr</strong><br>
+                                    TSIMISKI 43 THESSALONIKI<br>
+                                    TK:54248
                                 </address>
-                                +1 (734) 123-4567<br>
-                                <a href="#">hello@example.com</a>
+                                 2310 941 991<br>
+                                <a href="#">info@Contam.gr</a>
                             </article>
                         </div><!-- /.col-sm-3 -->
                         <div class="col-md-3 col-sm-3">
