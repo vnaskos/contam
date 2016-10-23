@@ -25,6 +25,7 @@
     <div class="navigation">
         <div class="secondary-navigation">
             <div class="container">
+                <!-- don't need
                 <div class="contact">
                     <figure><strong>Phone:</strong>+1 810-991-3842</figure>
                     <figure><strong>Email:</strong>zoner@example.com</figure>
@@ -41,6 +42,7 @@
                         <a href="#"><img src="assets/img/flags/es.png" alt=""></a>
                     </div>
                 </div>
+                -->
             </div>
         </div>
         <div class="container">
@@ -158,6 +160,7 @@
                                 <div class="form-group">
                                     <input type="text" class="form-control" id="search-box-property-id" placeholder="Property ID">
                                 </div>
+                                <!-- Don't need
                                 <div class="form-group">
                                     <select name="type">
                                         <option value="">Status</option>
@@ -165,6 +168,7 @@
                                         <option value="2">Sale</option>
                                     </select>
                                 </div><!-- /.form-group -->
+                                <!-- Don't need
                                 <div class="form-group">
                                     <select name="country">
                                         <option value="">Country</option>
@@ -175,6 +179,7 @@
                                         <option value="5">United States</option>
                                     </select>
                                 </div><!-- /.form-group -->
+                                <!-- Don't need
                                 <div class="form-group">
                                     <select name="city">
                                         <option value="">City</option>
@@ -184,7 +189,9 @@
                                         <option value="4">Houston</option>
                                         <option value="5">Philadelphia</option>
                                     </select>
+                                <!-- Don't need
                                 </div><!-- /.form-group -->
+                                <!-- Don't need
                                 <div class="form-group">
                                     <select name="district">
                                         <option value="">District</option>
@@ -198,24 +205,22 @@
                                 <div class="form-group">
                                     <select name="property-type">
                                         <option value="">Property Type</option>
-                                        <option value="1">Apartment</option>
-                                        <option value="2">Condominium</option>
-                                        <option value="3">Cottage</option>
-                                        <option value="4">Construction Site</option>
-                                        <option value="5">Industrial Site</option>
-                                        <option value="6">Garage</option>
-                                        <option value="7">Land</option>
-                                        <option value="8">Houseboat</option>
-                                        <option value="9">Villa</option>
-                                        <option value="10">Single Family</option>
-                                        <option value="11">Vineyard</option>
+                                        <option value="1">Gas Station</option>
+                                        <option value="2">Super Market</option>
+                                        <option value="3">ATM</option>
+                                        <option value="4">Mall</option>
+                                        <option value="5">Playroom</option>
+                                        <option value="6">Tavern</option>
+                                        <option value="7">Pharmacy</option>
                                     </select>
                                 </div><!-- /.form-group -->
+                                <!-- Dont need
                                 <div class="form-group">
                                     <div class="price-range">
                                         <input id="price-input" type="text" name="price" value="1000;299000">
                                     </div>
-                                </div>
+                                </div> 
+                                -->
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-default">Search Now</button>
                                 </div><!-- /.form-group -->
@@ -229,6 +234,7 @@
     <!-- end Search Box -->
 
     <!-- Page Content -->
+    
     <div id="page-content">
         <section id="featured-properties" class="featured-properties block background-color-grey-light carousel-full-width">
             <div class="container">
@@ -903,6 +909,7 @@
                 </div><!-- /.row-->
             </div><!-- /.container-->
         </section><!-- /#new-properties-->
+        <!-- Dont'e need
         <section id="testimonials" class="block">
             <div class="container">
                 <header class="section-title"><h2>Testimonials</h2></header>
@@ -930,8 +937,10 @@
                         </aside>
                     </blockquote>
                 </div><!-- /.testimonials-carousel -->
-            </div><!-- /.container -->
-        </section><!-- /#testimonials -->
+        
+          <!--  </div> <!-- /.container -->
+        <!-- </section><!-- /#testimonials -->
+        <!-- Don't need
         <section id="partners" class="block">
             <div class="container">
                 <header class="section-title"><h2>Our Partners</h2></header>
@@ -943,7 +952,7 @@
                     <div class="logo"><a href=""><img src="assets/img/logo-partner-05.png" alt=""></a></div>
                 </div>
             </div><!-- /.container -->
-        </section><!-- /#partners -->
+      <!--  </section><!-- /#partners -->
     </div>
     <!-- end Page Content -->
     <!-- Page Footer -->
