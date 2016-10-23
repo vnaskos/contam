@@ -132,7 +132,7 @@
                     </ul>
                 </nav><!-- /.navbar collapse-->
                 <div class="add-your-property">
-                    <a href="submit.html" class="btn btn-default"><i class="fa fa-plus"></i><span class="text">Add Your Property</span></a>
+                    <a href="submit.jsp" class="btn btn-default"><i class="fa fa-plus"></i><span class="text">Add Your Property</span></a>
                 </div>
             </header><!-- /.navbar -->
         </div><!-- /.container -->
