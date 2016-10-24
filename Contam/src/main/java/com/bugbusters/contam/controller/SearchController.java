@@ -5,6 +5,9 @@
  */
 package com.bugbusters.contam.controller;
 
+import com.bugbusters.contam.location.FindMyLocation;
+import com.bugbusters.contam.location.Ip;
+import com.bugbusters.contam.location.ServerLocation;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -36,7 +39,10 @@ public class SearchController extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
+        String clientIP = Ip.getClientPublicIP();
+        ServerLocation location = FindMyLocation.getLocation(clientIP);
         
+        System.out.println(location.getLatitude() + " " + location.getLongitude());
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

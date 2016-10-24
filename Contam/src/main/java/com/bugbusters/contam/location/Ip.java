@@ -10,21 +10,28 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author Vavouraz
  */
 public class Ip {
-    
-     public static void main(String[] args) throws IOException 
-    {
-    URL connection = new URL("http://checkip.amazonaws.com/");
-    URLConnection con = connection.openConnection();
-    @SuppressWarnings("UnusedAssignment")
-    String str = null;
-    BufferedReader reader = new BufferedReader(new InputStreamReader(con.getInputStream()));
-    str = reader.readLine();
-    System.out.println(str);
-     }
+
+    public static String getClientPublicIP() {
+        try {
+            URL connection = new URL("http://checkip.amazonaws.com/");
+            URLConnection con = connection.openConnection();
+            
+            BufferedReader reader = new BufferedReader(new InputStreamReader(con.getInputStream()));
+            String ip = reader.readLine();
+            
+            return ip;
+        } catch (IOException ex) {
+            Logger.getLogger(Ip.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return "";
+    }
 }
