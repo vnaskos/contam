@@ -19,7 +19,7 @@ public class FindMyLocation {
     
     public static void main(String[] args) {
 	FindMyLocation obj = new FindMyLocation();
-	ServerLocation location = obj.getLocation("2.85.191.243"); //put your IP
+	ServerLocation location = obj.getLocation("2.85.56.245"); //put the IP you see at Ip.java run result
 	System.out.println(location);
   }
 
