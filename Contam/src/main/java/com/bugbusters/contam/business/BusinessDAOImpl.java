@@ -157,7 +157,7 @@ public class BusinessDAOImpl implements BusinessDAO {
             lat = (lat*Math.PI)/180;
             lon = (lon*Math.PI)/180;
             
-            String query = "SELECT * FROM business WHERE acos(sin(?) * sin(latitude) + cos(?) * cos(latitude) * cos(longitude - (?))) * 6371 <= 1000;";
+            String query = "SELECT * FROM business WHERE acos(sin(?) * sin(latitude) + cos(?) * cos(latitude) * cos(longitude - (?))) * 6371 <= 1000";
             PreparedStatement stmt = conn.prepareStatement(query);
             stmt.setDouble(1, lat);
             stmt.setDouble(2, lat);
@@ -183,6 +183,45 @@ public class BusinessDAOImpl implements BusinessDAO {
             Logger.getLogger(BusinessDAOImpl.class.getName()).log(Level.SEVERE, null, ex);
         }
         
+        return Collections.EMPTY_LIST;
+    }
+    
+    @Override
+    public List<Business> searchBusiness(String keyword, double lat, double lon) {
+        try {
+            Connection conn = DBHelper.getConnection();
+
+            lat = (lat * Math.PI) / 180;
+            lon = (lon * Math.PI) / 180;
+
+            String query = "SELECT * FROM business WHERE acos(sin(?) * sin(latitude) + cos(?) * cos(latitude) * cos(longitude - (?))) * 6371 <= 1000 AND levenshtein(name, ?)";
+            PreparedStatement stmt = conn.prepareStatement(query);
+            stmt.setDouble(1, lat);
+            stmt.setDouble(2, lat);
+            stmt.setDouble(3, lon);
+            stmt.setString(4, keyword);
+
+            ResultSet rs = stmt.executeQuery();
+
+            List<Business> businesses = new ArrayList<>();
+
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String name = rs.getString("name");
+                double longitude = rs.getDouble("longitude");
+                double latitude = rs.getDouble("latitude");
+                Business b = new Business(id, name, longitude, latitude);
+                businesses.add(b);
+            }
+
+            stmt.close();
+            conn.close();
+
+            return businesses;
+        } catch (SQLException ex) {
+            Logger.getLogger(BusinessDAOImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
         return Collections.EMPTY_LIST;
     }
 

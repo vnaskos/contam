@@ -42,12 +42,12 @@ public class DBHelper {
 
         String drivers = props.getProperty("jdbc.drivers");
         String connectionURL = props.getProperty("jdbc.url");
+        String dbname = props.getProperty("jdbc.dbname");
         String username = props.getProperty("jdbc.username");
         String password = props.getProperty("jdbc.password");
         
         Class.forName(drivers);
-        Connection conn = DriverManager.getConnection(connectionURL, username, password);
-        System.out.println("Connection Successful");
+        Connection conn = DriverManager.getConnection(connectionURL+dbname, username, password);
         
         return conn;
     }

@@ -20,6 +20,8 @@ public interface BusinessDAO extends MainDAO {
     public List<Business> getBusinessByXY(double longitude, double latitude);
 
     public List<Business> getBusinessByAddress(String address);
+    
+    public List<Business> searchBusiness(String keyword, double x, double y);
 
     public void updateBusiness(Business business);
 
