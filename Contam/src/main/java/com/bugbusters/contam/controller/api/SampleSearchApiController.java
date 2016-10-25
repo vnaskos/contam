@@ -5,8 +5,13 @@
  */
 package com.bugbusters.contam.controller.api;
 
+import com.bugbusters.contam.business.Business;
+import com.bugbusters.contam.business.BusinessDAOImpl;
+import com.bugbusters.contam.location.FindMyLocation;
+import com.bugbusters.contam.location.Ip;
+import com.bugbusters.contam.location.ServerLocation;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.annotation.WebInitParam;
@@ -14,14 +19,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 /**
  *
  * @author Vasilis Naskos <http://vnaskos.com>
  */
 @WebServlet(name = "SearchApiController", urlPatterns = {"/api/search"}, initParams = {
     @WebInitParam(name = "keyword", value = "business"),
-    @WebInitParam(name = "x", value = "0"),
-    @WebInitParam(name = "y", value = "0")})
+    @WebInitParam(name = "x", value = "0.0"),
+    @WebInitParam(name = "y", value = "0.0")})
 public class SampleSearchApiController extends HttpServlet {
 
     /**
@@ -36,11 +42,19 @@ public class SampleSearchApiController extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("application/json");
+         
+        String clientIP = Ip.getClientPublicIP();
+        ServerLocation location = FindMyLocation.getLocation(clientIP);
         
-        PrintWriter out = response.getWriter();
-        
-        out.print("{\"id\": \"1\", \"name\": \"Farmakeio\", \"address\": \"Olympiou 47, Serres 621 25, Greece\"}");
-        out.flush();
+        String keyword = request.getParameter("keyword");
+        double x = Double.parseDouble(location.getLatitude());
+        double y = Double.parseDouble(location.getLongitude());
+
+         BusinessDAOImpl businessDAO = new BusinessDAOImpl();
+        List<Business> resutls = businessDAO.searchBusiness(keyword, x, y);
+
+
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
