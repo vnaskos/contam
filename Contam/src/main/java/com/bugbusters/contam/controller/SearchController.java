@@ -59,7 +59,8 @@ public class SearchController extends HttpServlet {
         
         BusinessDAOImpl businessDAO = new BusinessDAOImpl();
         List<Business> results = businessDAO.searchBusiness(keyword, x, y);
-            
+        
+        request.setAttribute("keyword", keyword);
         request.setAttribute("latitude", x);
         request.setAttribute("longitude", y);
         request.setAttribute("results", results);    

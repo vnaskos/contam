@@ -162,7 +162,7 @@
                             <form role="form" id="form-map" action="search" class="form-map form-search">
                                 <h2>Search</h2>
                                 <div class="form-group">
-                                    <input type="text" name="keyword" class="form-control" id="search-box-property-id" placeholder="Business">
+                                    <input type="text" name="keyword" value="${keyword}" class="form-control" id="search-box-property-id" placeholder="Business">
                                 </div>
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-default">Search Now</button>

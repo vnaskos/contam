@@ -10,7 +10,9 @@ import com.bugbusters.contam.business.BusinessDAOImpl;
 import com.bugbusters.contam.location.FindMyLocation;
 import com.bugbusters.contam.location.Ip;
 import com.bugbusters.contam.location.ServerLocation;
+import com.google.gson.Gson;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -42,19 +44,22 @@ public class SearchApiController extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("application/json");
-         
-        String clientIP = Ip.getClientPublicIP();
-        ServerLocation location = FindMyLocation.getLocation(clientIP);
         
         String keyword = request.getParameter("keyword");
-        double x = Double.parseDouble(location.getLatitude());
-        double y = Double.parseDouble(location.getLongitude());
+        String xStr = request.getParameter("x");
+        String yStr = request.getParameter("y");
 
-         BusinessDAOImpl businessDAO = new BusinessDAOImpl();
+        double x = Double.parseDouble(xStr);
+        double y = Double.parseDouble(yStr);
+        
+        BusinessDAOImpl businessDAO = new BusinessDAOImpl();
         List<Business> resutls = businessDAO.searchBusiness(keyword, x, y);
-
-
-
+        
+        String json = new Gson().toJson(resutls);
+        
+        PrintWriter out = response.getWriter();
+        out.print(json);
+        out.flush();
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
