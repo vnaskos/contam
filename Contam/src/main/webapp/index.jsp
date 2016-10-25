@@ -988,7 +988,7 @@
     <c:choose>
         <c:when test="${results.size() > 0}">
             <c:forEach items="${results}" var="result">
-                ["${result.name}", "Minneapolis, MN 55402", "$36,000", ${result.latitude}, ${result.longitude}, "property-detail.html", "assets/img/properties/property-01.jpg", "assets/img/property-types/apartment.png"],
+                ["${result.address}", "${result.description}", "${result.name}", ${result.latitude}, ${result.longitude}, "property-detail.html", "assets/img/properties/property-01.jpg", "assets/img/property-types/apartment.png"],
             </c:forEach>
         </c:when>
     </c:choose>

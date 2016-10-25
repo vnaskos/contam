@@ -7,14 +7,10 @@ package com.bugbusters.contam.controller;
 
 import com.bugbusters.contam.business.Business;
 import com.bugbusters.contam.business.BusinessDAOImpl;
-import com.bugbusters.contam.location.FindMyLocation;
-import com.bugbusters.contam.location.Ip;
-import com.bugbusters.contam.location.ServerLocation;
 import java.io.IOException;
-import java.util.List;
+import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.annotation.WebInitParam;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -23,11 +19,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Vasilis Naskos <http://vnaskos.com>
  */
-@WebServlet(name = "SearchController", urlPatterns = {"/search"}, initParams = {
-    @WebInitParam(name = "keyword", value = "key"),
-    @WebInitParam(name = "x", value = "0.0"),
-    @WebInitParam(name = "y", value = "0.0")})
-public class SearchController extends HttpServlet {
+@WebServlet(name = "AddBusinessController", urlPatterns = {"/addBusiness"})
+public class AddBusinessController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -42,29 +35,23 @@ public class SearchController extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
-        String keyword = request.getParameter("keyword");
-        double x;
-        double y;
+        String name = request.getParameter("name");
+        String address = request.getParameter("address");
+        String latitude = request.getParameter("latitude");
+        String longitude = request.getParameter("longitude");
+        String description = request.getParameter("description");
         
-        if(request.getParameter("x") != null && request.getParameter("y") != null) {
-            x = Double.parseDouble(request.getParameter("x"));
-            y = Double.parseDouble(request.getParameter("y"));
-        } else {
-            String clientIP = Ip.getClientPublicIP();
-            ServerLocation location = FindMyLocation.getLocation(clientIP);
-
-            x = Double.parseDouble(location.getLatitude());
-            y = Double.parseDouble(location.getLongitude());
-        }
+        Business business = new Business();
+        business.setName(name);
+        business.setAddress(address);
+        business.setLatitude(Double.parseDouble(latitude));
+        business.setLongitude(Double.parseDouble(longitude));
+        business.setDescription(description);
         
         BusinessDAOImpl businessDAO = new BusinessDAOImpl();
-        List<Business> results = businessDAO.searchBusiness(keyword, x, y);
-            
-        request.setAttribute("latitude", x);
-        request.setAttribute("longitude", y);
-        request.setAttribute("results", results);    
+        businessDAO.addBusiness(business);
         
-        request.getRequestDispatcher("/index.jsp").forward(request, response);
+        request.getRequestDispatcher("/index").forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -124,12 +124,15 @@ public class BusinessDAOImpl implements BusinessDAO {
         try {
             Connection conn = DBHelper.getConnection();
             
-            String query = "INSERT INTO business (name, longitude, latitude)"
-                    + " VALUESResultSet rs =  ( ?, ?, ? )";
+            String query = "INSERT INTO business "
+                    + "(name, latitude, longitude, description, address) "
+                    + "VALUES (?, ?, ?, ?, ?)";
             PreparedStatement stmt = conn.prepareStatement(query);
             stmt.setString(1, business.getName());
-            stmt.setDouble(2, business.getLongitude());
-            stmt.setDouble(3, business.getLatitude());
+            stmt.setDouble(2, business.getLatitude());
+            stmt.setDouble(3, business.getLongitude());
+            stmt.setString(4, business.getDescription());
+            stmt.setString(5, business.getAddress());
             stmt.execute();
             
             stmt.close();
@@ -204,7 +207,11 @@ public class BusinessDAOImpl implements BusinessDAO {
                 String name = rs.getString("name");
                 double longitude = rs.getDouble("longitude");
                 double latitude = rs.getDouble("latitude");
+                String address = rs.getString("address");
+                String description = rs.getString("description");
                 Business b = new Business(id, name, longitude, latitude);
+                b.setAddress(address);
+                b.setDescription(description);
                 businesses.add(b);
             }
 

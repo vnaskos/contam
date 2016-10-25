@@ -153,7 +153,7 @@
 
         <div class="container">
             <!-- code = 1 -->
-            <form role="form" id="form-submit" class="form-submit" action="thank-you.html">
+            <form role="form" id="form-submit" class="form-submit" action="addBusiness">
                 <div class="row">
                     <div class="block">
                         <div class="col-md-9 col-sm-9">
@@ -164,110 +164,24 @@
                                         <div class="col-md-8">
                                             <div class="form-group">
                                                 <label for="submit-title">Name</label>
-                                                <input type="text" class="form-control" id="submit-title" name="title" required>
+                                                <input type="text" class="form-control" id="submit-title" name="name" required>
                                                 
                                                 <label for="submit-address">Address</label>
-                                                <input type="text" class="form-control" id="submit-address" name="title" required>
+                                                <input type="text" class="form-control" id="submit-address" name="address" required>
                                                 
+                                                <label for="submit-lat">Latitude</label>
+                                                <input type="text" class="form-control" id="submit-lat" name="latitude" required>
                                                 
-                                                
-                                            </div><!-- /.form-group -->
-                                        </div>
-                                        <div class="col-md-4">
-                                            
-                                            <div class="form-group">
-                                                <!-- Don't need
-                                                <label for="submit-price">Price</label>
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">$</span>
-                                                    <input type="text" class="form-control" id="submit-price" name="price" pattern="\d*" required>
-                                                </div>
-                                                -->
-                                            
+                                                <label for="submit-long">Longitude</label>
+                                                <input type="text" class="form-control" id="submit-long" name="longitude" required>
                                             </div><!-- /.form-group -->
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="submit-description">Description</label>
-                                        <textarea class="form-control" id="submit-description" rows="8" name="submit-description" required></textarea>
+                                        <textarea class="form-control" id="submit-description" rows="8" name="description" required></textarea>
                                     </div><!-- /.form-group -->
                                 </section><!-- /#basic-information -->
-
-                                <section>
-                                    <!-- code = 2 -->
-                                    <div class="row">
-                                        <div class="block clearfix">
-                                            <div class="col-md-6 col-sm-6">
-                                               <!-- code = 2 -->
-                                               
-                                            </div><!-- /.col-md-6 -->
-                                            <div class="col-md-6 col-sm-6">
-                                                <section id="place-on-map">
-                                                    <header class="section-title">
-                                                        <h2>Place on Map</h2>
-                                                        <span class="link-arrow geo-location">Get My Position</span>
-                                                    </header>
-                                                    <div class="form-group">
-                                                        <label for="address-map">Address</label>
-                                                        <input type="text" class="form-control" id="address-map" name="address">
-                                                    </div><!-- /.form-group -->
-                                                    <label for="address-map">Or drag the marker to property position</label>
-                                                    <div id="submit-map"></div>
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <div class="form-group">
-                                                                <input type="text" class="form-control" id="latitude" name="latitude" readonly>
-                                                            </div><!-- /.form-group -->
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <div class="form-group">
-                                                                <input type="text" class="form-control" id="longitude" name="longitude" readonly>
-                                                            </div><!-- /.form-group -->
-                                                        </div>
-                                                    </div>
-                                                </section><!-- /#place-on-map -->
-                                            </div><!-- /.col-md-6 -->
-                                        </div><!-- /.block -->
-                                    </div><!-- /.row -->
-                                </section>
-                                
-                                
-                                <section class="block" id="gallery">
-                                    <header><h2>Gallery</h2></header>
-                                    <div class="center">
-                                        <div class="form-group">
-                                            <input id="file-upload" type="file" class="file" multiple="true" data-show-upload="false" data-show-caption="false" data-show-remove="false" accept="image/jpeg,image/png" data-browse-class="btn btn-default" data-browse-label="Browse Images">
-                                            <figure class="note"><strong>Hint:</strong> You can upload all images at once!</figure>
-                                        </div>
-                                    </div>
-                                </section>
-                                <!-- Don't need
-                                <section id="property-features" class="block">
-                                    <section>
-                                        <header><h2>Property Features</h2></header>
-                                        <ul class="submit-features">
-                                            <li><div class="checkbox"><label><input type="checkbox">Air conditioning</label></div></li>
-                                            <li><div class="checkbox"><label><input type="checkbox">Bedding</label></div></li>
-                                            <li><div class="checkbox"><label><input type="checkbox">Heating</label></div></li>
-                                            <li><div class="checkbox"><label><input type="checkbox">Internet</label></div></li>
-                                            <li><div class="checkbox"><label><input type="checkbox">Microwave</label></div></li>
-                                            <li><div class="checkbox"><label><input type="checkbox">Smoking allowed</label></div></li>
-                                            <li><div class="checkbox"><label><input type="checkbox">Use of pool</label></div></li>
-                                            <li><div class="checkbox"><label><input type="checkbox">Toaster</label></div></li>
-                                            <li><div class="checkbox"><label><input type="checkbox">Coffee pot</label></div></li>
-                                            <li><div class="checkbox"><label><input type="checkbox">Cable TV</label></div></li>
-                                            <li><div class="checkbox"><label><input type="checkbox">Parquet</label></div></li>
-                                            <li><div class="checkbox"><label><input type="checkbox">Roof terrace</label></div></li>
-                                            <li><div class="checkbox"><label><input type="checkbox">Terrace</label></div></li>
-                                            <li><div class="checkbox"><label><input type="checkbox">Balcony</label></div></li>
-                                            <li><div class="checkbox"><label><input type="checkbox">Iron</label></div></li>
-                                            <li><div class="checkbox"><label><input type="checkbox">Hi-Fi</label></div></li>
-                                            <li><div class="checkbox"><label><input type="checkbox">Beach</label></div></li>
-                                            <li><div class="checkbox"><label><input type="checkbox">Garage</label></div></li>
-                                        </ul>
-                                    </section>
-                                </section>
-                                -->
                                 <hr>
                             </section>
                         </div><!-- /.col-md-9 -->
@@ -288,21 +202,10 @@
                         <div class="col-md-9 col-sm-9">
                             <div class="center">
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-default large">Proceed to Payment</button>
+                                    <button type="submit" class="btn btn-default large">Add Business</button>
                                 </div><!-- /.form-group -->
-                                <figure class="note block">By clicking the “Proceed to Payment” or “Submit” button you agree with our <a href="terms-conditions.html">Terms and conditions</a></figure>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-3">
-                            <aside class="submit-step">
-                                <figure class="step-number">3</figure>
-                                <div class="description">
-                                    <h4>Review Information and Proceed to Payment</h4>
-                                    <p>Carefully check entered information and than click button to submit them.
-                                    </p>
-                                </div>
-                            </aside><!-- /.submit-step -->
-                        </div><!-- /.col-md-3 -->
                     </div>
                 </div>
             </form><!-- /#form-submit -->
@@ -396,7 +299,7 @@
 
 <script type="text/javascript" src="assets/js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript" src="assets/js/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyB1ozxp7wn3dRuCQbaCRJ63_YV8enwMP98&sensor=false"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyB1ozxp7wn3dRuCQbaCRJ63_YV8enwMP98"></script>
 <script type="text/javascript" src="assets/js/markerwithlabel_packed.js"></script>
 <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="assets/js/smoothscroll.js"></script>

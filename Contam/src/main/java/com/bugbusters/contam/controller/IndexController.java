@@ -35,14 +35,19 @@ public class IndexController extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
-        String clientIP = Ip.getClientPublicIP();
-        ServerLocation location = FindMyLocation.getLocation(clientIP);
-        
-        double x = Double.parseDouble(location.getLatitude());
-        double y = Double.parseDouble(location.getLongitude());
-        
-        request.setAttribute("latitude", x);
-        request.setAttribute("longitude", y);
+        if(request.getParameter("x") != null && request.getParameter("y") != null) {
+            request.setAttribute("latitude", request.getParameter("x"));
+            request.setAttribute("longitude", request.getParameter("y"));
+        } else {
+            String clientIP = Ip.getClientPublicIP();
+            ServerLocation location = FindMyLocation.getLocation(clientIP);
+
+            double x = Double.parseDouble(location.getLatitude());
+            double y = Double.parseDouble(location.getLongitude());
+
+            request.setAttribute("latitude", x);
+            request.setAttribute("longitude", y);
+        }
         
         request.getRequestDispatcher("/index.jsp").forward(request, response);
     }
