@@ -1,5 +1,9 @@
-<!DOCTYPE html>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page import="com.bugbusters.contam.business.Business" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
+<!DOCTYPE html>
 <html lang="en-US">
 <head>
     <meta charset="UTF-8"/>
@@ -155,72 +159,11 @@
                 <div class="row">
                     <div class="col-md-3 col-sm-4">
                         <div class="search-box map">
-                            <form role="form" id="form-map" class="form-map form-search">
-                                <h2>Search Your Property</h2>
+                            <form role="form" id="form-map" action="search" class="form-map form-search">
+                                <h2>Search</h2>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="search-box-property-id" placeholder="Property ID">
+                                    <input type="text" name="keyword" class="form-control" id="search-box-property-id" placeholder="Business">
                                 </div>
-                                <!-- Don't need
-                                <div class="form-group">
-                                    <select name="type">
-                                        <option value="">Status</option>
-                                        <option value="1">Rent</option>
-                                        <option value="2">Sale</option>
-                                    </select>
-                                </div><!-- /.form-group -->
-                                <!-- Don't need
-                                <div class="form-group">
-                                    <select name="country">
-                                        <option value="">Country</option>
-                                        <option value="1">France</option>
-                                        <option value="2">Great Britain</option>
-                                        <option value="3">Spain</option>
-                                        <option value="4">Russia</option>
-                                        <option value="5">United States</option>
-                                    </select>
-                                </div><!-- /.form-group -->
-                                <!-- Don't need
-                                <div class="form-group">
-                                    <select name="city">
-                                        <option value="">City</option>
-                                        <option value="1">New York</option>
-                                        <option value="2">Los Angeles</option>
-                                        <option value="3">Chicago</option>
-                                        <option value="4">Houston</option>
-                                        <option value="5">Philadelphia</option>
-                                    </select>
-                                <!-- Don't need
-                                </div><!-- /.form-group -->
-                                <!-- Don't need
-                                <div class="form-group">
-                                    <select name="district">
-                                        <option value="">District</option>
-                                        <option value="1">Manhattan</option>
-                                        <option value="2">The Bronx</option>
-                                        <option value="3">Brooklyn</option>
-                                        <option value="4">Queens</option>
-                                        <option value="5">Staten Island</option>
-                                    </select>
-                                </div><!-- /.form-group -->
-                                <div class="form-group">
-                                    <select name="property-type">
-                                        <option value="">Property Type</option>
-                                        <option value="1">Gas Station</option>
-                                        <option value="2">Super Market</option>
-                                        <option value="3">ATM</option>
-                                        <option value="4">Mall</option>
-                                        <option value="5">Playroom</option>
-                                        <option value="6">Tavern</option>
-                                        <option value="7">Pharmacy</option>
-                                    </select>
-                                </div><!-- /.form-group -->
-                                <!-- Dont need
-                                <div class="form-group">
-                                    <div class="price-range">
-                                        <input id="price-input" type="text" name="price" value="1000;299000">
-                                    </div>
-                                </div> 
-                                -->
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-default">Search Now</button>
                                 </div><!-- /.form-group -->
@@ -1008,7 +951,7 @@
             <aside id="footer-thumbnails" class="footer-thumbnails"></aside><!-- /#footer-thumbnails -->
             <aside id="footer-copyright">
                 <div class="container">
-                    <span>Copyright © 2013. All Rights Reserved.</span>
+                    <span>Copyright Â© 2013. All Rights Reserved.</span>
                     <span class="pull-right"><a href="#page-top" class="roll">Go to top</a></span>
                 </div>
             </aside>
@@ -1020,7 +963,7 @@
 <div id="overlay"></div>
 
 <script type="text/javascript" src="assets/js/jquery-2.1.0.min.js"></script>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyB1ozxp7wn3dRuCQbaCRJ63_YV8enwMP98&sensor=false"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyB1ozxp7wn3dRuCQbaCRJ63_YV8enwMP98"></script>
 <script type="text/javascript" src="assets/js/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="assets/js/smoothscroll.js"></script>
@@ -1040,14 +983,25 @@
 <script type="text/javascript" src="assets/js/draggable-0.1.js"></script>
 <script type="text/javascript" src="assets/js/jquery.slider.js"></script>
 <script type="text/javascript" src="assets/js/markerclusterer_packed.js"></script>
+<script>
+    var locations = [
+    <c:choose>
+        <c:when test="${results.size() > 0}">
+            <c:forEach items="${results}" var="result">
+                ["${result.name}", "Minneapolis, MN 55402", "$36,000", ${result.latitude}, ${result.longitude}, "property-detail.html", "assets/img/properties/property-01.jpg", "assets/img/property-types/apartment.png"],
+            </c:forEach>
+        </c:when>
+    </c:choose>
+    ];
+</script>
 <script type="text/javascript" src="assets/js/custom-map.js"></script>
 <script type="text/javascript" src="assets/js/custom.js"></script>
 <!--[if gt IE 8]>
 <script type="text/javascript" src="assets/js/ie.js"></script>
 <![endif]-->
 <script>
-    _latitude = 48.87;
-    _longitude = 2.29;
+    _latitude = ${latitude};
+    _longitude = ${longitude};
     createHomepageGoogleMap(_latitude,_longitude);
     $(window).load(function(){
         initializeOwl(false);

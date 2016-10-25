@@ -51,9 +51,11 @@ public class SearchController extends HttpServlet {
         double y = Double.parseDouble(location.getLongitude());
         
         BusinessDAOImpl businessDAO = new BusinessDAOImpl();
-        List<Business> resutls = businessDAO.searchBusiness(keyword, x, y);
+        List<Business> results = businessDAO.searchBusiness(keyword, x, y);
         
-        request.setAttribute("results", resutls);
+        request.setAttribute("results", results);
+        request.setAttribute("latitude", x);
+        request.setAttribute("longitude", y);
         
         request.getRequestDispatcher("/index.jsp").forward(request, response);
     }

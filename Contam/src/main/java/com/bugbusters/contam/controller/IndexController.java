@@ -5,6 +5,9 @@
  */
 package com.bugbusters.contam.controller;
 
+import com.bugbusters.contam.location.FindMyLocation;
+import com.bugbusters.contam.location.Ip;
+import com.bugbusters.contam.location.ServerLocation;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -32,9 +35,15 @@ public class IndexController extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
-        //send a parameter to the JSP
-        request.setAttribute("name", "World");
-        //redirect to index.jsp
+        String clientIP = Ip.getClientPublicIP();
+        ServerLocation location = FindMyLocation.getLocation(clientIP);
+        
+        double x = Double.parseDouble(location.getLatitude());
+        double y = Double.parseDouble(location.getLongitude());
+        
+        request.setAttribute("latitude", x);
+        request.setAttribute("longitude", y);
+        
         request.getRequestDispatcher("/index.jsp").forward(request, response);
     }
 

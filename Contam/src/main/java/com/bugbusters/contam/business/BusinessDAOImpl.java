@@ -154,9 +154,6 @@ public class BusinessDAOImpl implements BusinessDAO {
         try {
             Connection conn = DBHelper.getConnection();
             
-            lat = (lat*Math.PI)/180;
-            lon = (lon*Math.PI)/180;
-            
             String query = "SELECT * FROM business WHERE acos(sin(?) * sin(latitude) + cos(?) * cos(latitude) * cos(longitude - (?))) * 6371 <= 1000";
             PreparedStatement stmt = conn.prepareStatement(query);
             stmt.setDouble(1, lat);
@@ -191,10 +188,7 @@ public class BusinessDAOImpl implements BusinessDAO {
         try {
             Connection conn = DBHelper.getConnection();
 
-            lat = (lat * Math.PI) / 180;
-            lon = (lon * Math.PI) / 180;
-
-            String query = "SELECT * FROM business WHERE acos(sin(?) * sin(latitude) + cos(?) * cos(latitude) * cos(longitude - (?))) * 6371 <= 1000 AND levenshtein(name, ?)";
+            String query = "SELECT * FROM business WHERE acos(sin(?) * sin(latitude) + cos(?) * cos(latitude) * cos(longitude - (?))) * 6371 <= 1000 AND levenshtein(name, ?) <= 4";
             PreparedStatement stmt = conn.prepareStatement(query);
             stmt.setDouble(1, lat);
             stmt.setDouble(2, lat);
