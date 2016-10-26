@@ -1,6 +1,7 @@
 package com.bugbusters.contam;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -14,9 +15,12 @@ import android.widget.ListView;
 import com.bugbusters.contam.util.JSONParser;
 import com.bugbusters.contam.util.MyLocation;
 import com.bugbusters.contam.util.Pair;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import org.json.JSONObject;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,8 +34,7 @@ public class ResultActivity extends AppCompatActivity {
     private ArrayAdapter<String> adapter;
     private JSONParser jParser;
     private MyLocation myLocation;
-    private MyLocation.LocationResult locationResult;
-    private double x,y;
+    private String lat,lon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,21 +61,35 @@ public class ResultActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 searchFor(searchField.getText().toString());
-                listItems.add(searchField.getText().toString());
-                adapter.notifyDataSetChanged();
             }
         });
 
         myLocation = new MyLocation();
-        locationResult = new MyLocation.LocationResult() {
-            @Override
-            public void gotLocation(Location location) {
-                x = location.getLatitude();
-                y = location.getLongitude();
-            }
-        };
         myLocation.getLocation(getApplicationContext(), locationResult);
     }
+
+    public MyLocation.LocationResult locationResult = new MyLocation.LocationResult() {
+
+        @Override
+        public void gotLocation(Location location) {
+            final double longitude = location.getLongitude();
+            final double latitude = location.getLatitude();
+
+            try {
+                SharedPreferences locationPref = getApplication()
+                        .getSharedPreferences("location", MODE_PRIVATE);
+                SharedPreferences.Editor prefsEditor = locationPref.edit();
+                prefsEditor.putString("Longitude", longitude + "");
+                prefsEditor.putString("Latitude", latitude + "");
+                prefsEditor.commit();
+                lat = latitude + "";
+                lon = longitude + "";
+                Log.d("Long Lat", longitude + " " + latitude);
+            } catch (Exception e) {
+                Log.e("Location", e.toString());
+            }
+        }
+    };
 
     private void searchFor(final String message) {
         new Thread(new Runnable() {
@@ -80,17 +97,32 @@ public class ResultActivity extends AppCompatActivity {
             public void run() {
                 List<Pair> params = new ArrayList<>();
 
-                myLocation.getLocation(getApplicationContext(), locationResult);
-                Log.d("location", x + "," + y);
+                Log.d("location", lat + "," + lon);
 
                 params.add(new Pair("keyword", message));
-                params.add(new Pair("x", x+""));
-                params.add(new Pair("y", y+""));
+                params.add(new Pair("x", lat));
+                params.add(new Pair("y", lon));
 
-                String url = "http://192.168.1.53:8084/Contam/api/search";
+                String url = "http://78.87.89.2:8080/Contam/api/search?";
 
                 JSONObject json = jParser.makeHttpRequest(url, "GET", params);
                 System.out.println(json);
+
+                listItems.clear();
+
+                Type type = new TypeToken<List<Business>>(){}.getType();
+                List<Business> inpList = new Gson().fromJson(json.toString(), type);
+                for (int i=0;i<inpList.size();i++) {
+                    Business b = inpList.get(i);
+                    listItems.add(b.getName() + " - " + b.getAddress());
+                }
+
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        adapter.notifyDataSetChanged();
+                    }
+                });
             }
         }).start();
     }
