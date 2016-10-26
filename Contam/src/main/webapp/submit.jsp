@@ -187,9 +187,9 @@
                         </div><!-- /.col-md-9 -->
                         <div class="col-md-3 col-sm-3">
                             <aside class="submit-step">
-                                <figure class="step-number">2</figure>
+                                <figure class="step-number">1</figure>
                                 <div class="description">
-                                    <h4>Enter Information About Property</h4>
+                                    <h4>Enter Information About Business</h4>
                                     <p>Type information about your property. Be descriptive.
                                     </p>
                                 </div>
@@ -221,64 +221,41 @@
                         <div class="col-md-3 col-sm-3">
                             <article>
                                 <h3>About Us</h3>
-                                <p>Vel fermentum ipsum. Suspendisse quis molestie odio. Interdum et malesuada fames ac ante ipsum
-                                    primis in faucibus. Quisque aliquet a metus in aliquet. Praesent ut turpis posuere, commodo odio
-                                    id, ornare tortor
+                                <p>Contam.gr is a   platform which  provides detailed,
+                                geolocated information for all  kinds of businesses  in Greece. 
+                                It has become unquestionably the No1 local search engine in Greece. 
+                                Contam.gr' s  intelligent and flexible search engine, 
+                                provides helpful local information to ready to 
+                                buy customers and is definitely a necessary vehicle for anyone.
                                 </p>
                                 <hr>
                                 <a href="#" class="link-arrow">Read More</a>
                             </article>
                         </div><!-- /.col-sm-3 -->
                         <div class="col-md-3 col-sm-3">
-                            <article>
-                                <h3>Recent Properties</h3>
-                                <div class="property small">
-                                    <a href="property-detail.html">
-                                        <div class="property-image">
-                                            <img alt="" src="assets/img/properties/property-06.jpg">
-                                        </div>
-                                    </a>
-                                    <div class="info">
-                                        <a href="property-detail.html"><h4>2186 Rinehart Road</h4></a>
-                                        <figure>Doral, FL 33178 </figure>
-                                        <div class="tag price">$ 72,000</div>
-                                    </div>
-                                </div><!-- /.property -->
-                                <div class="property small">
-                                    <a href="property-detail.html">
-                                        <div class="property-image">
-                                            <img alt="" src="assets/img/properties/property-09.jpg">
-                                        </div>
-                                    </a>
-                                    <div class="info">
-                                        <a href="property-detail.html"><h4>2479 Murphy Court</h4></a>
-                                        <figure>Minneapolis, MN 55402</figure>
-                                        <div class="tag price">$ 36,000</div>
-                                    </div>
-                                </div><!-- /.property -->
-                            </article>
+                            
                         </div><!-- /.col-sm-3 -->
                         <div class="col-md-3 col-sm-3">
                             <article>
                                 <h3>Contact</h3>
                                 <address>
-                                    <strong>Your Company</strong><br>
-                                    4877 Spruce Drive<br>
-                                    West Newton, PA 15089
+                                    <strong>Contam.gr</strong><br>
+                                    TSIMISKI 43 THESSALONIKI<br>
+                                    TK:54248
                                 </address>
-                                +1 (734) 123-4567<br>
-                                <a href="#">hello@example.com</a>
+                                 2310 941 991<br>
+                                <a href="#">info@Contam.gr</a>
                             </article>
                         </div><!-- /.col-sm-3 -->
                         <div class="col-md-3 col-sm-3">
                             <article>
                                 <h3>Useful Links</h3>
                                 <ul class="list-unstyled list-links">
-                                    <li><a href="#">All Properties</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                    <li><a href="#">Login and Register Account</a></li>
-                                    <li><a href="#">FAQ</a></li>
-                                    <li><a href="#">Terms and Conditions</a></li>
+                                   <li><!--<a href="#">-->All Properties<!--</a>--></li>
+                                            <li><!--<a href="#">-->Privacy Policy<!--</a>--></li>
+                                            <li><!--<a href="#">-->Login and Register Account<!--</a>--></li>
+                                            <li><!--<a href="#">-->FAQ<!--</a>--></li>
+                                            <li><!--<a href="#">-->Terms and Conditions<!--</a>--></li>
                                 </ul>
                             </article>
                         </div><!-- /.col-sm-3 -->

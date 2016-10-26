@@ -196,23 +196,9 @@
                                 <figure>Golden Valley, MN 55427</figure>
                             </div>
                             <ul class="additional-info">
-                                <li>
-                                    <header>Area:</header>
-                                    <figure>240m<sup>2</sup></figure>
-                                </li>
-                                <li>
-                                    <header>Beds:</header>
-                                    <figure>2</figure>
-                                </li>
-                                <li>
-                                    <header>Baths:</header>
-                                    <figure>2</figure>
-                                </li>
-                                <li>
-                                    <header>Garages:</header>
-                                    <figure>0</figure>
-                                </li>
+                            
                             </ul>
+                            
                         </div>
                     </a>
                 </div><!-- /.property -->
@@ -228,23 +214,9 @@
                                 <figure>Chicago, IL 60610 </figure>
                             </div>
                             <ul class="additional-info">
-                                <li>
-                                    <header>Area:</header>
-                                    <figure>120m<sup>2</sup></figure>
-                                </li>
-                                <li>
-                                    <header>Beds:</header>
-                                    <figure>1</figure>
-                                </li>
-                                <li>
-                                    <header>Baths:</header>
-                                    <figure>1</figure>
-                                </li>
-                                <li>
-                                    <header>Garages:</header>
-                                    <figure>1</figure>
-                                </li>
+                            
                             </ul>
+                            
                         </div>
                     </a>
                 </div><!-- /.property -->
@@ -260,22 +232,7 @@
                                 <figure>Atlanta, GA 30303 </figure>
                             </div>
                             <ul class="additional-info">
-                                <li>
-                                    <header>Area:</header>
-                                    <figure>120m<sup>2</sup></figure>
-                                </li>
-                                <li>
-                                    <header>Beds:</header>
-                                    <figure>1</figure>
-                                </li>
-                                <li>
-                                    <header>Baths:</header>
-                                    <figure>1</figure>
-                                </li>
-                                <li>
-                                    <header>Garages:</header>
-                                    <figure>1</figure>
-                                </li>
+                            
                             </ul>
                         </div>
                     </a>
@@ -292,22 +249,7 @@
                                 <figure>Doral, FL 33178 </figure>
                             </div>
                             <ul class="additional-info">
-                                <li>
-                                    <header>Area:</header>
-                                    <figure>620m<sup>2</sup></figure>
-                                </li>
-                                <li>
-                                    <header>Beds:</header>
-                                    <figure>3</figure>
-                                </li>
-                                <li>
-                                    <header>Baths:</header>
-                                    <figure>2</figure>
-                                </li>
-                                <li>
-                                    <header>Garages:</header>
-                                    <figure>2</figure>
-                                </li>
+                            
                             </ul>
                         </div>
                     </a>
@@ -324,22 +266,7 @@
                                 <figure>Atlanta, GA 30303 </figure>
                             </div>
                             <ul class="additional-info">
-                                <li>
-                                    <header>Area:</header>
-                                    <figure>120m<sup>2</sup></figure>
-                                </li>
-                                <li>
-                                    <header>Beds:</header>
-                                    <figure>1</figure>
-                                </li>
-                                <li>
-                                    <header>Baths:</header>
-                                    <figure>1</figure>
-                                </li>
-                                <li>
-                                    <header>Garages:</header>
-                                    <figure>1</figure>
-                                </li>
+                            
                             </ul>
                         </div>
                     </a>
@@ -356,22 +283,7 @@
                                 <figure>Atlanta, GA 30303 </figure>
                             </div>
                             <ul class="additional-info">
-                                <li>
-                                    <header>Area:</header>
-                                    <figure>120m<sup>2</sup></figure>
-                                </li>
-                                <li>
-                                    <header>Beds:</header>
-                                    <figure>1</figure>
-                                </li>
-                                <li>
-                                    <header>Baths:</header>
-                                    <figure>1</figure>
-                                </li>
-                                <li>
-                                    <header>Garages:</header>
-                                    <figure>1</figure>
-                                </li>
+                            
                             </ul>
                         </div>
                     </a>
@@ -398,24 +310,6 @@
                                         <h3>3398 Lodgeville Road</h3>
                                         <figure>Golden Valley, MN 55427</figure>
                                     </div>
-                                    <ul class="additional-info">
-                                        <li>
-                                            <header>Area:</header>
-                                            <figure>240m<sup>2</sup></figure>
-                                        </li>
-                                        <li>
-                                            <header>Beds:</header>
-                                            <figure>2</figure>
-                                        </li>
-                                        <li>
-                                            <header>Baths:</header>
-                                            <figure>2</figure>
-                                        </li>
-                                        <li>
-                                            <header>Garages:</header>
-                                            <figure>0</figure>
-                                        </li>
-                                    </ul>
                                 </div>
                             </a>
                         </div><!-- /.property -->
@@ -433,24 +327,7 @@
                                         <h3>2186 Rinehart Road</h3>
                                         <figure>Doral, FL 33178 </figure>
                                     </div>
-                                    <ul class="additional-info">
-                                        <li>
-                                            <header>Area:</header>
-                                            <figure>240m<sup>2</sup></figure>
-                                        </li>
-                                        <li>
-                                            <header>Beds:</header>
-                                            <figure>3</figure>
-                                        </li>
-                                        <li>
-                                            <header>Baths:</header>
-                                            <figure>1</figure>
-                                        </li>
-                                        <li>
-                                            <header>Garages:</header>
-                                            <figure>1</figure>
-                                        </li>
-                                    </ul>
+                                    
                                 </div>
                             </a>
                         </div><!-- /.property -->
@@ -467,24 +344,7 @@
                                         <h3>3705 Brighton Circle Road</h3>
                                         <figure>Glenwood, MN 56334</figure>
                                     </div>
-                                    <ul class="additional-info">
-                                        <li>
-                                            <header>Area:</header>
-                                            <figure>240m<sup>2</sup></figure>
-                                        </li>
-                                        <li>
-                                            <header>Beds:</header>
-                                            <figure>3</figure>
-                                        </li>
-                                        <li>
-                                            <header>Baths:</header>
-                                            <figure>1</figure>
-                                        </li>
-                                        <li>
-                                            <header>Garages:</header>
-                                            <figure>1</figure>
-                                        </li>
-                                    </ul>
+                                    
                                 </div>
                             </a>
                         </div><!-- /.property -->
@@ -502,24 +362,7 @@
                                         <h3>362 Lynn Ogden Lane</h3>
                                         <figure>Galveston, TX 77550</figure>
                                     </div>
-                                    <ul class="additional-info">
-                                        <li>
-                                            <header>Area:</header>
-                                            <figure>240m<sup>2</sup></figure>
-                                        </li>
-                                        <li>
-                                            <header>Beds:</header>
-                                            <figure>3</figure>
-                                        </li>
-                                        <li>
-                                            <header>Baths:</header>
-                                            <figure>1</figure>
-                                        </li>
-                                        <li>
-                                            <header>Garages:</header>
-                                            <figure>1</figure>
-                                        </li>
-                                    </ul>
+                                    
                                 </div>
                             </a>
                         </div><!-- /.property -->
@@ -536,8 +379,8 @@
                             <figure class="icon"><i class="fa fa-folder"></i></figure>
                             <aside class="description">
                                 <header><h3>Wide Range of Properties</h3></header>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                                <a href="properties-listing.html" class="link-arrow">Read More</a>
+                                <p>More than 50.000 businesses around the wolrd that they trust our services</p>
+                                <a href="#" class="link-arrow">Read More</a>
                             </aside>
                         </div><!-- /.feature-box -->
                     </div><!-- /.col-md-4 -->
@@ -545,9 +388,9 @@
                         <div class="feature-box equal-height">
                             <figure class="icon"><i class="fa fa-users"></i></figure>
                             <aside class="description">
-                                <header><h3>14 Agents for Your Service</h3></header>
-                                <p>Aliquam gravida magna et fringilla convallis. Pellentesque habitant morbi </p>
-                                <a href="agents-listing.html" class="link-arrow">Read More</a>
+                                <header><h3>The 8</h3></header>
+                                <p>The wonderfull team of 8 is here to help you at anytime</p>
+                                <a href="#" class="link-arrow">Read More</a>
                             </aside>
                         </div><!-- /.feature-box -->
                     </div><!-- /.col-md-4 -->
@@ -556,7 +399,7 @@
                             <figure class="icon"><i class="fa fa-money"></i></figure>
                             <aside class="description">
                                 <header><h3>Best Price Guarantee!</h3></header>
-                                <p>Phasellus non viverra tortor, id auctor leo. Suspendisse id nibh placerat</p>
+                                <p>Find the nearest and the businesses near to you</p>
                                 <a href="#" class="link-arrow">Read More</a>
                             </aside>
                         </div><!-- /.feature-box -->
@@ -584,24 +427,7 @@
                                         <h3>3398 Lodgeville Road</h3>
                                         <figure>Golden Valley, MN 55427</figure>
                                     </div>
-                                    <ul class="additional-info">
-                                        <li>
-                                            <header>Area:</header>
-                                            <figure>240m<sup>2</sup></figure>
-                                        </li>
-                                        <li>
-                                            <header>Beds:</header>
-                                            <figure>2</figure>
-                                        </li>
-                                        <li>
-                                            <header>Baths:</header>
-                                            <figure>2</figure>
-                                        </li>
-                                        <li>
-                                            <header>Garages:</header>
-                                            <figure>0</figure>
-                                        </li>
-                                    </ul>
+                                    
                                 </div>
                             </a>
                         </div><!-- /.property -->
@@ -619,24 +445,7 @@
                                         <h3>2186 Rinehart Road</h3>
                                         <figure>Doral, FL 33178 </figure>
                                     </div>
-                                    <ul class="additional-info">
-                                        <li>
-                                            <header>Area:</header>
-                                            <figure>240m<sup>2</sup></figure>
-                                        </li>
-                                        <li>
-                                            <header>Beds:</header>
-                                            <figure>3</figure>
-                                        </li>
-                                        <li>
-                                            <header>Baths:</header>
-                                            <figure>1</figure>
-                                        </li>
-                                        <li>
-                                            <header>Garages:</header>
-                                            <figure>1</figure>
-                                        </li>
-                                    </ul>
+                                    
                                 </div>
                             </a>
                         </div><!-- /.property -->
@@ -653,24 +462,7 @@
                                         <h3>3705 Brighton Circle Road</h3>
                                         <figure>Glenwood, MN 56334</figure>
                                     </div>
-                                    <ul class="additional-info">
-                                        <li>
-                                            <header>Area:</header>
-                                            <figure>240m<sup>2</sup></figure>
-                                        </li>
-                                        <li>
-                                            <header>Beds:</header>
-                                            <figure>3</figure>
-                                        </li>
-                                        <li>
-                                            <header>Baths:</header>
-                                            <figure>1</figure>
-                                        </li>
-                                        <li>
-                                            <header>Garages:</header>
-                                            <figure>1</figure>
-                                        </li>
-                                    </ul>
+                                    
                                 </div>
                             </a>
                         </div><!-- /.property -->
@@ -688,24 +480,7 @@
                                         <h3>362 Lynn Ogden Lane</h3>
                                         <figure>Galveston, TX 77550</figure>
                                     </div>
-                                    <ul class="additional-info">
-                                        <li>
-                                            <header>Area:</header>
-                                            <figure>240m<sup>2</sup></figure>
-                                        </li>
-                                        <li>
-                                            <header>Beds:</header>
-                                            <figure>3</figure>
-                                        </li>
-                                        <li>
-                                            <header>Baths:</header>
-                                            <figure>1</figure>
-                                        </li>
-                                        <li>
-                                            <header>Garages:</header>
-                                            <figure>1</figure>
-                                        </li>
-                                    </ul>
+                                    
                                 </div>
                             </a>
                         </div><!-- /.property -->
@@ -724,24 +499,7 @@
                                         <h3>2506 B Street</h3>
                                         <figure>New Brighton, MN 55112</figure>
                                     </div>
-                                    <ul class="additional-info">
-                                        <li>
-                                            <header>Area:</header>
-                                            <figure>280m<sup>2</sup></figure>
-                                        </li>
-                                        <li>
-                                            <header>Beds:</header>
-                                            <figure>3</figure>
-                                        </li>
-                                        <li>
-                                            <header>Baths:</header>
-                                            <figure>2</figure>
-                                        </li>
-                                        <li>
-                                            <header>Garages:</header>
-                                            <figure>1</figure>
-                                        </li>
-                                    </ul>
+                                    
                                 </div>
                             </a>
                         </div><!-- /.property -->
@@ -759,24 +517,7 @@
                                         <h3>3990 Late Avenue</h3>
                                         <figure>Kingfisher, OK 73750</figure>
                                     </div>
-                                    <ul class="additional-info">
-                                        <li>
-                                            <header>Area:</header>
-                                            <figure>30m<sup>2</sup></figure>
-                                        </li>
-                                        <li>
-                                            <header>Beds:</header>
-                                            <figure>1</figure>
-                                        </li>
-                                        <li>
-                                            <header>Baths:</header>
-                                            <figure>1</figure>
-                                        </li>
-                                        <li>
-                                            <header>Garages:</header>
-                                            <figure>0</figure>
-                                        </li>
-                                    </ul>
+                                    
                                 </div>
                             </a>
                         </div><!-- /.property -->
@@ -793,24 +534,7 @@
                                         <h3>297 Marie Street</h3>
                                         <figure>Towson, MD 21204 </figure>
                                     </div>
-                                    <ul class="additional-info">
-                                        <li>
-                                            <header>Area:</header>
-                                            <figure>240m<sup>2</sup></figure>
-                                        </li>
-                                        <li>
-                                            <header>Beds:</header>
-                                            <figure>3</figure>
-                                        </li>
-                                        <li>
-                                            <header>Baths:</header>
-                                            <figure>1</figure>
-                                        </li>
-                                        <li>
-                                            <header>Garages:</header>
-                                            <figure>1</figure>
-                                        </li>
-                                    </ul>
+                                    
                                 </div>
                             </a>
                         </div><!-- /.property -->
@@ -827,28 +551,18 @@
                                         <h3>64 Timberbrook Lane</h3>
                                         <figure>Denver, CO 80202</figure>
                                     </div>
-                                    <ul class="additional-info">
-                                        <li>
-                                            <header>Area:</header>
-                                            <figure>240m<sup>2</sup></figure>
-                                        </li>
-                                        <li>
-                                            <header>Beds:</header>
-                                            <figure>3</figure>
-                                        </li>
-                                        <li>
-                                            <header>Baths:</header>
-                                            <figure>1</figure>
-                                        </li>
-                                        <li>
-                                            <header>Garages:</header>
-                                            <figure>1</figure>
-                                        </li>
-                                    </ul>
+                                    
                                 </div>
                             </a>
                         </div><!-- /.property -->
                     </div><!-- /.col-md-3 -->
+                    
+                    <!-- the dynamic list
+                    <c:forEach var="i" begin="0" end="${results.size()}">
+                        ${megaString[i]}
+                    </c:forEach>
+                    
+                    
                 </div><!-- /.row-->
             </div><!-- /.container-->
         </section><!-- /#new-properties-->
