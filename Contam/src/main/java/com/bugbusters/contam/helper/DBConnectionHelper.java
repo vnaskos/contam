@@ -16,9 +16,9 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author 
+ * @author Xaris
  */
-public class DBHelper {
+public class DBConnectionHelper {
 
     public static Connection getConnection() {
         Connection conn = null;
@@ -26,7 +26,7 @@ public class DBHelper {
         try {
             conn = attemptConnection();
         } catch (ClassNotFoundException | SQLException | IOException ex) {
-            Logger.getLogger(DBHelper.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DBConnectionHelper.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         return conn;
@@ -45,10 +45,10 @@ public class DBHelper {
         String dbname = props.getProperty("jdbc.dbname");
         String username = props.getProperty("jdbc.username");
         String password = props.getProperty("jdbc.password");
-        
+
         Class.forName(drivers);
-        Connection conn = DriverManager.getConnection(connectionURL+dbname, username, password);
-        
+        Connection conn = DriverManager.getConnection(connectionURL + dbname, username, password);
+
         return conn;
     }
 }
