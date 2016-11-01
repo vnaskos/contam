@@ -27,28 +27,6 @@
 <div class="wrapper">
 
     <div class="navigation">
-        <div class="secondary-navigation">
-            <div class="container">
-                <!-- don't need
-                <div class="contact">
-                    <figure><strong>Phone:</strong>+1 810-991-3842</figure>
-                    <figure><strong>Email:</strong>zoner@example.com</figure>
-                </div>
-                <div class="user-area">
-                    <div class="actions">
-                        <a href="create-agency.html" class="promoted">Create Agency</a>
-                        <a href="create-account.html" class="promoted"><strong>Register</strong></a>
-                        <a href="sign-in.html">Sign In</a>
-                    </div>
-                    <div class="language-bar">
-                        <a href="#" class="active"><img src="assets/img/flags/gb.png" alt=""></a>
-                        <a href="#"><img src="assets/img/flags/de.png" alt=""></a>
-                        <a href="#"><img src="assets/img/flags/es.png" alt=""></a>
-                    </div>
-                </div>
-                -->
-            </div>
-        </div>
         <div class="container">
             <header class="navbar" id="top" role="banner">
                 <div class="navbar-header">
@@ -64,41 +42,10 @@
                 </div>
                 <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
                     <ul class="nav navbar-nav">
-                        <li class="active has-child"><a href="#">Homepage</a>
-                            <ul class="child-navigation">
-                                <!--<li><a href="index-google-map-fullscreen.html">Google Map Full Screen</a></li>
-                                <li><a href="index-google-map-fixed-height.html">Google Map Fixed Height</a></li>
-                                <li><a href="index-google-map-fixed-navigation.html">Google Map Fixed Navigation</a></li>
-                                <li><a href="index-osm.html">OpenStreetMap Full Screen</a></li>
-                                <li><a href="index-osm-fixed-height.html">OpenStreetMap Fixed Height</a></li>
-                                <li><a href="index-osm-fixed-navigation.html">OpenStreetMap Fixed Navigation</a></li>
-                                <li><a href="index-slider.html">Slider Homepage</a></li>
-                                <li><a href="index-slider-search-box.html">Slider with Search Box</a></li>
-                                <li><a href="index-horizontal-search-floated.html">Horizontal Search Floated</a></li>
-                                <li><a href="index-advanced-horizontal-search.html">Horizontal Advanced Search</a></li>
-                                <li><a href="index-slider-horizontal-search-box.html">Horizontal Slider Search</a></li>
-                                <li><a href="index-slider-horizontal-search-box-floated.html">Horizontal Slider Floated Search</a></li>-->
-                            </ul>
-                        </li>
-                        <li class="has-child"><a href="#">Properties</a>
-                            <ul class="child-navigation">
-                               <!-- <li><a href="property-detail.html">Property Detail</a></li>
-                                <li><a href="properties-listing.html">Masonry Listing</a></li>
-                                <li><a href="properties-listing-grid.html">Grid Listing</a></li>
-                                <li><a href="properties-listing-lines.html">Lines Listing</a></li>-->
-                            </ul>
-                        </li>
+                        <li class="active"><a href="#">Homepage</a></li>
                         <li class="has-child"><a href="#">Pages</a>
                             <ul class="child-navigation">
                                 <li><a href="about-us.html">About Us</a></li>
-                               <!-- <li><a href="agent-detail.html">Agent Detail</a></li>
-                                <li><a href="invoice-print.html">Invoice</a></li>
-                                <li><a href="profile.html">Profile</a></li>
-                                <li><a href="my-properties.html">My Properties</a></li>
-                                <li><a href="bookmarked.html">Bookmarked Properties</a></li>-->
-                                <li><a href="create-account.html">Create Account</a></li>
-                               <!-- <li><a href="create-agency.html">Create Agency</a></li>-->
-                                <li><a href="sign-in.html">Sign In</a></li>
                                 <li class="has-child"><a href="#">Error Pages</a>
                                     <ul class="child-navigation">
                                         <li><a href="403.html">403</a></li>
@@ -107,31 +54,9 @@
                                     </ul>
                                 </li>
                                 <li><a href="faq.html">FAQ</a></li>
-                                <!--<li><a href="left-sidebar.html">Left Sidebar</a></li>
-                                <li><a href="right-sidebar.html">Right Sidebar</a></li>
-                                <li><a href="sticky-footer.html">Sticky Footer</a></li>
-                                <li><a href="pricing.html">Pricing</a></li>
-                                <li><a href="shortcodes.html">Shortcodes</a></li>
-                                <li><a href="timeline.html">Timeline</a></li>-->
                                 <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                               <!-- <li><a href="rtl.html">RTL Support</a></li>-->
                             </ul>
                         </li>
-                        <!--<li class="has-child"><a href="#">Agents & Agencies</a>
-                            <ul class="child-navigation">
-                                <li><a href="agents-listing.html">Agents Listing</a></li>
-                                <li><a href="agent-detail.html">Agent Detail</a></li>
-                                <li><a href="agencies-listing.html">Agencies Listing</a></li>
-                                <li><a href="agency-detail.html">Agency Detail</a></li>
-                            </ul>
-                        </li>-->
-                        <!--<li><a href="submit.html">Submit</a></li>
-                        <li class="has-child"><a href="#">Blog</a>
-                            <ul class="child-navigation">
-                                <li><a href="blog.html">Blog Listing</a></li>
-                                <li><a href="blog-detail.html">Blog Post Detail</a></li>
-                            </ul>
-                        </li>-->
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </nav><!-- /.navbar collapse-->
@@ -181,197 +106,46 @@
     <!-- Page Content -->
     
     <div id="page-content">
-        <section id="featured-properties" class="featured-properties block background-color-grey-light carousel-full-width">
-            <div class="container">
-                <header class="section-title"><h2>Featured Properties</h2></header>
-            </div><!-- /.container -->
-            <div class="owl-carousel featured-properties-carousel">
-                <div class="property big">
-                    <a href="property-detail.html">
-                        <div class="property-image">
-                            <img alt="" src="assets/img/properties/property-01.jpg">
-                        </div>
-                        <div class="overlay">
-                            <div class="info">
-                                
-                                <h3>3398 Lodgeville Road</h3>
-                                <figure>Golden Valley, MN 55427</figure>
-                            </div>
-                            <ul class="additional-info">
-                            
-                            </ul>
-                            
-                        </div>
-                    </a>
-                </div><!-- /.property -->
-                <div class="property big">
-                    <a href="property-detail.html">
-                        <div class="property-image">
-                            <img alt="" src="assets/img/properties/property-02.jpg">
-                        </div>
-                        <div class="overlay">
-                            <div class="info">
-                                
-                                <h3>987 Cantebury Drive</h3>
-                                <figure>Chicago, IL 60610 </figure>
-                            </div>
-                            <ul class="additional-info">
-                            
-                            </ul>
-                            
-                        </div>
-                    </a>
-                </div><!-- /.property -->
-                <div class="property big">
-                    <a href="property-detail.html">
-                        <div class="property-image">
-                            <img alt="" src="assets/img/properties/property-03.jpg">
-                        </div>
-                        <div class="overlay">
-                            <div class="info">
-                                
-                                <h3>1866 Clement Street</h3>
-                                <figure>Atlanta, GA 30303 </figure>
-                            </div>
-                            <ul class="additional-info">
-                            
-                            </ul>
-                        </div>
-                    </a>
-                </div><!-- /.property -->
-                <div class="property big">
-                    <a href="property-detail.html">
-                        <div class="property-image">
-                            <img alt="" src="assets/img/properties/property-04.jpg">
-                        </div>
-                        <div class="overlay">
-                            <div class="info">
-                              
-                                <h3>2186 Rinehart Road</h3>
-                                <figure>Doral, FL 33178 </figure>
-                            </div>
-                            <ul class="additional-info">
-                            
-                            </ul>
-                        </div>
-                    </a>
-                </div><!-- /.property -->
-                <div class="property big">
-                    <a href="property-detail.html">
-                        <div class="property-image">
-                            <img alt="" src="assets/img/properties/property-05.jpg">
-                        </div>
-                        <div class="overlay">
-                            <div class="info">
-                                
-                                <h3>1866 Clement Street</h3>
-                                <figure>Atlanta, GA 30303 </figure>
-                            </div>
-                            <ul class="additional-info">
-                            
-                            </ul>
-                        </div>
-                    </a>
-                </div><!-- /.property -->
-                <div class="property big">
-                    <a href="property-detail.html">
-                        <div class="property-image">
-                            <img alt="" src="assets/img/properties/property-03.jpg">
-                        </div>
-                        <div class="overlay">
-                            <div class="info">
-                               
-                                <h3>1866 Clement Street</h3>
-                                <figure>Atlanta, GA 30303 </figure>
-                            </div>
-                            <ul class="additional-info">
-                            
-                            </ul>
-                        </div>
-                    </a>
-                </div><!-- /.property -->
-            </div>
-        </section><!-- /#featured-properties -->
         <section id="price-drop" class="block">
             <div class="container">
                 <header class="section-title">
-                    <h2>Price Drop</h2>
-                    <a href="properties-listing.html" class="link-arrow">All Properties</a>
+                    <h2>Results</h2>
+                    <a href="#" class="link-arrow">More Results</a>
                 </header>
-                <div class="row">
-                    <div class="col-md-3 col-sm-6">
-                        <div class="property">
-                            
-                            <a href="property-detail.html">
-                                <div class="property-image">
-                                    <img alt="" src="assets/img/properties/property-06.jpg">
-                                </div>
-                                <div class="overlay">
-                                    <div class="info">
-                                      
-                                        <h3>3398 Lodgeville Road</h3>
-                                        <figure>Golden Valley, MN 55427</figure>
-                                    </div>
-                                </div>
-                            </a>
-                        </div><!-- /.property -->
-                    </div><!-- /.col-md-3 -->
-                    <div class="col-md-3 col-sm-6">
-                        <div class="property">
-                           
-                            <a href="property-detail.html">
-                                <div class="property-image">
-                                    <img alt="" src="assets/img/properties/property-04.jpg">
-                                </div>
-                                <div class="overlay">
-                                    <div class="info">
-                                        
-                                        <h3>2186 Rinehart Road</h3>
-                                        <figure>Doral, FL 33178 </figure>
-                                    </div>
-                                    
-                                </div>
-                            </a>
-                        </div><!-- /.property -->
-                    </div><!-- /.col-md-3 -->
-                    <div class="col-md-3 col-sm-6">
-                        <div class="property">
-                            <a href="property-detail.html">
-                                <div class="property-image">
-                                    <img alt="" src="assets/img/properties/property-07.jpg">
-                                </div>
-                                <div class="overlay">
-                                    <div class="info">
-                                        
-                                        <h3>3705 Brighton Circle Road</h3>
-                                        <figure>Glenwood, MN 56334</figure>
-                                    </div>
-                                    
-                                </div>
-                            </a>
-                        </div><!-- /.property -->
-                    </div><!-- /.col-md-3 -->
-                    <div class="col-md-3 col-sm-6">
-                        <div class="property">
-                           
-                            <a href="property-detail.html">
-                                <div class="property-image">
-                                    <img alt="" src="assets/img/properties/property-08.jpg">
-                                </div>
-                                <div class="overlay">
-                                    <div class="info">
-                                        
-                                        <h3>362 Lynn Ogden Lane</h3>
-                                        <figure>Galveston, TX 77550</figure>
-                                    </div>
-                                    
-                                </div>
-                            </a>
-                        </div><!-- /.property -->
-                    </div><!-- /.col-md-3 -->
-                </div><!-- /.row-->
+                
+                <c:choose>
+                    <c:when test="${results.size() > 0}">
+                        <c:forEach items="${results}" var="result" varStatus="loop">
+                            <c:choose>
+                                <c:when test="${(loop.index+1) / 4 != 0}">
+                                    <div class="row">
+                                </c:when>
+                            </c:choose>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="property">
+                                        <a href="property-detail.html">
+                                            <div class="property-image">
+                                                <img alt="" src="assets/img/properties/property-06.jpg">
+                                            </div>
+                                            <div class="overlay">
+                                                <div class="info">
+                                                    <h3>${result.name}</h3>
+                                                    <figure>${result.address}</figure>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div><!-- /.property -->
+                                </div><!-- /.col-md-3 -->
+                            <c:choose>
+                                <c:when test="${(loop.index+1) / 4 != 0}">
+                                    </div><!-- /.row-->
+                                </c:when>
+                            </c:choose>
+                        </c:forEach>
+                    </c:when>
+                </c:choose>
             </div><!-- /.container -->
-        </section><!-- /#price-drop -->
+        </section><!-- /#results -->
         <section id="our-services" class="block">
             <div class="container">
                 <header class="section-title"><h2>Our Services</h2></header>
@@ -409,165 +183,6 @@
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </section><!-- /#our-services -->
-        <section id="new-properties" class="block">
-            <div class="container">
-                <header class="section-title">
-                    <h2>New Properties for You</h2>
-                    <a href="properties-listing.html" class="link-arrow">All Properties</a>
-                </header>
-                <div class="row">
-                    <div class="col-md-3 col-sm-6">
-                        <div class="property">
-                            
-                            <a href="property-detail.html">
-                                <div class="property-image">
-                                    <img alt="" src="assets/img/properties/property-09.jpg">
-                                </div>
-                                <div class="overlay">
-                                    <div class="info">
-                                        
-                                        <h3>3398 Lodgeville Road</h3>
-                                        <figure>Golden Valley, MN 55427</figure>
-                                    </div>
-                                    
-                                </div>
-                            </a>
-                        </div><!-- /.property -->
-                    </div><!-- /.col-md-3 -->
-                    <div class="col-md-3 col-sm-6">
-                        <div class="property">
-                           
-                            <a href="property-detail.html">
-                                <div class="property-image">
-                                    <img alt="" src="assets/img/properties/property-03.jpg">
-                                </div>
-                                <div class="overlay">
-                                    <div class="info">
-                                       
-                                        <h3>2186 Rinehart Road</h3>
-                                        <figure>Doral, FL 33178 </figure>
-                                    </div>
-                                    
-                                </div>
-                            </a>
-                        </div><!-- /.property -->
-                    </div><!-- /.col-md-3 -->
-                    <div class="col-md-3 col-sm-6">
-                        <div class="property">
-                            <a href="property-detail.html">
-                                <div class="property-image">
-                                    <img alt="" src="assets/img/properties/property-06.jpg">
-                                </div>
-                                <div class="overlay">
-                                    <div class="info">
-                                        
-                                        <h3>3705 Brighton Circle Road</h3>
-                                        <figure>Glenwood, MN 56334</figure>
-                                    </div>
-                                    
-                                </div>
-                            </a>
-                        </div><!-- /.property -->
-                    </div><!-- /.col-md-3 -->
-                    <div class="col-md-3 col-sm-6">
-                        <div class="property">
-                            
-                            <a href="property-detail.html">
-                                <div class="property-image">
-                                    <img alt="" src="assets/img/properties/property-01.jpg">
-                                </div>
-                                <div class="overlay">
-                                    <div class="info">
-                                        
-                                        <h3>362 Lynn Ogden Lane</h3>
-                                        <figure>Galveston, TX 77550</figure>
-                                    </div>
-                                    
-                                </div>
-                            </a>
-                        </div><!-- /.property -->
-                    </div><!-- /.col-md-3 -->
-                </div><!-- /.row-->
-                <div class="row">
-                    <div class="col-md-3 col-sm-6">
-                        <div class="property">
-                            <a href="property-detail.html">
-                                <div class="property-image">
-                                    <img alt="" src="assets/img/properties/property-02.jpg">
-                                </div>
-                                <div class="overlay">
-                                    <div class="info">
-                                       
-                                        <h3>2506 B Street</h3>
-                                        <figure>New Brighton, MN 55112</figure>
-                                    </div>
-                                    
-                                </div>
-                            </a>
-                        </div><!-- /.property -->
-                    </div><!-- /.col-md-3 -->
-                    <div class="col-md-3 col-sm-6">
-                        <div class="property">
-                           
-                            <a href="property-detail.html">
-                                <div class="property-image">
-                                    <img alt="" src="assets/img/properties/property-12.jpg">
-                                </div>
-                                <div class="overlay">
-                                    <div class="info">
-                                        
-                                        <h3>3990 Late Avenue</h3>
-                                        <figure>Kingfisher, OK 73750</figure>
-                                    </div>
-                                    
-                                </div>
-                            </a>
-                        </div><!-- /.property -->
-                    </div><!-- /.col-md-3 -->
-                    <div class="col-md-3 col-sm-6">
-                        <div class="property">
-                            <a href="property-detail.html">
-                                <div class="property-image">
-                                    <img alt="" src="assets/img/properties/property-05.jpg">
-                                </div>
-                                <div class="overlay">
-                                    <div class="info">
-                                        
-                                        <h3>297 Marie Street</h3>
-                                        <figure>Towson, MD 21204 </figure>
-                                    </div>
-                                    
-                                </div>
-                            </a>
-                        </div><!-- /.property -->
-                    </div><!-- /.col-md-3 -->
-                    <div class="col-md-3 col-sm-6">
-                        <div class="property">
-                            <a href="property-detail.html">
-                                <div class="property-image">
-                                    <img alt="" src="assets/img/properties/property-10.jpg">
-                                </div>
-                                <div class="overlay">
-                                    <div class="info">
-                                        
-                                        <h3>64 Timberbrook Lane</h3>
-                                        <figure>Denver, CO 80202</figure>
-                                    </div>
-                                    
-                                </div>
-                            </a>
-                        </div><!-- /.property -->
-                    </div><!-- /.col-md-3 -->
-                    
-                    <!-- the dynamic list
-                    <c:forEach var="i" begin="0" end="${results.size()}">
-                        ${megaString[i]}
-                    </c:forEach>
-                    
-                    
-                </div><!-- /.row-->
-            </div><!-- /.container-->
-        </section><!-- /#new-properties-->
     </div>
     <!-- end Page Content -->
     <!-- Page Footer -->
@@ -609,11 +224,9 @@
                             <article>
                                 <h3>Useful Links</h3>
                                 <ul class="list-unstyled list-links">
-                                   <li><!--<a href="#">-->All Properties<!--</a>--></li>
-                                            <li><!--<a href="#">-->Privacy Policy<!--</a>--></li>
-                                            <li><!--<a href="#">-->Login and Register Account<!--</a>--></li>
-                                            <li><!--<a href="#">-->FAQ<!--</a>--></li>
-                                            <li><!--<a href="#">-->Terms and Conditions<!--</a>--></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                    <li><a href="#">Terms and Conditions</a></li>
                                 </ul>
                             </article>
                         </div><!-- /.col-sm-3 -->
@@ -623,7 +236,7 @@
             <aside id="footer-thumbnails" class="footer-thumbnails"></aside><!-- /#footer-thumbnails -->
             <aside id="footer-copyright">
                 <div class="container">
-                    <span>Copyright Â© 2013. All Rights Reserved.</span>
+                    <span>Copyright © 2016. All Rights Reserved.</span>
                     <span class="pull-right"><a href="#page-top" class="roll">Go to top</a></span>
                 </div>
             </aside>
