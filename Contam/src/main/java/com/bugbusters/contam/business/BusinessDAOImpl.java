@@ -5,7 +5,7 @@
  */
 package com.bugbusters.contam.business;
 
-import com.bugbusters.contam.helper.DBHelper;
+import com.bugbusters.contam.helper.DBConnectionHelper;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -25,7 +25,7 @@ public class BusinessDAOImpl implements BusinessDAO {
     @Override
     public List<Business> getAllBusiness() {
         try {
-            Connection conn = DBHelper.getConnection();
+            Connection conn = DBConnectionHelper.getConnection();
             
             String query = "SELECT * FROM business";
             PreparedStatement stmt = conn.prepareStatement(query);
@@ -56,7 +56,7 @@ public class BusinessDAOImpl implements BusinessDAO {
     @Override
     public Business getBusinessById(int id) {
         try {
-            Connection conn = DBHelper.getConnection();
+            Connection conn = DBConnectionHelper.getConnection();
             
             String query = "SELECT * FROM business WHERE id = ?";
             PreparedStatement stmt = conn.prepareStatement(query);
@@ -83,7 +83,7 @@ public class BusinessDAOImpl implements BusinessDAO {
     @Override
     public void updateBusiness(Business business) {
         try {
-            Connection conn = DBHelper.getConnection();
+            Connection conn = DBConnectionHelper.getConnection();
             
             String query = "UPDATE business SET address = ?,description = ?,longitude = ?,latitude = ?,postalCode = ? WHERE name = ?";
             PreparedStatement stmt = conn.prepareStatement(query);
@@ -105,7 +105,7 @@ public class BusinessDAOImpl implements BusinessDAO {
     @Override
     public void deleteBusiness(Business business) {
           try {
-            Connection conn = DBHelper.getConnection();
+            Connection conn = DBConnectionHelper.getConnection();
             
             String query = "DELETE FROM business WHERE name = ?";
             PreparedStatement stmt = conn.prepareStatement(query);
@@ -122,7 +122,7 @@ public class BusinessDAOImpl implements BusinessDAO {
     @Override
     public void addBusiness(Business business) {
         try {
-            Connection conn = DBHelper.getConnection();
+            Connection conn = DBConnectionHelper.getConnection();
             
             String query = "INSERT INTO business "
                     + "(name, latitude, longitude, description, address) "
@@ -155,7 +155,7 @@ public class BusinessDAOImpl implements BusinessDAO {
     @Override
     public List<Business> getBusinessByXY(double lat, double lon) {
         try {
-            Connection conn = DBHelper.getConnection();
+            Connection conn = DBConnectionHelper.getConnection();
             
             String query = "SELECT * FROM business WHERE acos(sin(?) * sin(latitude) + cos(?) * cos(latitude) * cos(longitude - (?))) * 6371 <= 1000";
             PreparedStatement stmt = conn.prepareStatement(query);
@@ -189,7 +189,7 @@ public class BusinessDAOImpl implements BusinessDAO {
     @Override
     public List<Business> searchBusiness(String keyword, double lat, double lon) {
         try {
-            Connection conn = DBHelper.getConnection();
+            Connection conn = DBConnectionHelper.getConnection();
 
             String query = "SELECT * FROM business WHERE acos(sin(?) * sin(latitude) + cos(?) * cos(latitude) * cos(longitude - (?))) * 6371 <= 1000 AND levenshtein(name, ?) <= 4";
             PreparedStatement stmt = conn.prepareStatement(query);

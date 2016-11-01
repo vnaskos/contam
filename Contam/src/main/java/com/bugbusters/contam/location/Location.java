@@ -9,7 +9,7 @@ package com.bugbusters.contam.location;
  *
  * @author Vavouraz
  */
-public class ServerLocation {
+public class Location {
     private String countryCode;
 	private String countryName;
 	private String region;

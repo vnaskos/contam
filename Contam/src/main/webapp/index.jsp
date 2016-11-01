@@ -164,6 +164,8 @@
                                 <div class="form-group">
                                     <input type="text" name="keyword" value="${keyword}" class="form-control" id="search-box-property-id" placeholder="Business">
                                 </div>
+                                <input type="hidden" id="latitude-field" name="x" value="${latitude}" />
+                                <input type="hidden" id="longitude-field" name="y" value="${longitude}" />
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-default">Search Now</button>
                                 </div><!-- /.form-group -->
@@ -566,50 +568,6 @@
                 </div><!-- /.row-->
             </div><!-- /.container-->
         </section><!-- /#new-properties-->
-        <!-- Dont'e need
-        <section id="testimonials" class="block">
-            <div class="container">
-                <header class="section-title"><h2>Testimonials</h2></header>
-                <div class="owl-carousel testimonials-carousel">
-                    <blockquote class="testimonial">
-                        <figure>
-                            <div class="image">
-                                <img alt="" src="assets/img/client-01.jpg">
-                            </div>
-                        </figure>
-                        <aside class="cite">
-                            <p>Fusce risus metus, placerat in consectetur eu, porttitor a est sed sed dolor lorem cras adipiscing</p>
-                            <footer>Natalie Jenkins</footer>
-                        </aside>
-                    </blockquote>
-                    <blockquote class="testimonial">
-                        <figure>
-                            <div class="image">
-                                <img alt="" src="assets/img/client-01.jpg">
-                            </div>
-                        </figure>
-                        <aside class="cite">
-                            <p>Fusce risus metus, placerat in consectetur eu, porttitor a est sed sed dolor lorem cras adipiscing</p>
-                            <footer>Natalie Jenkins</footer>
-                        </aside>
-                    </blockquote>
-                </div><!-- /.testimonials-carousel -->
-        
-          <!--  </div> <!-- /.container -->
-        <!-- </section><!-- /#testimonials -->
-        <!-- Don't need
-        <section id="partners" class="block">
-            <div class="container">
-                <header class="section-title"><h2>Our Partners</h2></header>
-                <div class="logos">
-                    <div class="logo"><a href=""><img src="assets/img/logo-partner-01.png" alt=""></a></div>
-                    <div class="logo"><a href=""><img src="assets/img/logo-partner-02.png" alt=""></a></div>
-                    <div class="logo"><a href=""><img src="assets/img/logo-partner-03.png" alt=""></a></div>
-                    <div class="logo"><a href=""><img src="assets/img/logo-partner-04.png" alt=""></a></div>
-                    <div class="logo"><a href=""><img src="assets/img/logo-partner-05.png" alt=""></a></div>
-                </div>
-            </div><!-- /.container -->
-      <!--  </section><!-- /#partners -->
     </div>
     <!-- end Page Content -->
     <!-- Page Footer -->
@@ -716,10 +674,43 @@
 <script>
     _latitude = ${latitude};
     _longitude = ${longitude};
-    createHomepageGoogleMap(_latitude,_longitude);
-    $(window).load(function(){
-        initializeOwl(false);
-    });
+    
+    function geoFindMe() {
+        if(navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(success, error, geoOptions);
+        } else {
+            console.log("Geolocation services are not supported by your web browser.");
+        }
+    }
+
+    function success(position) {
+        _latitude = position.coords.latitude;
+        _longitude = position.coords.longitude;
+        $("#latitude-field").val(_latitude);
+        $("#longitude-field").val(_longitude);
+        initMap();
+        console.log("lat: " + _latitude + " long: " + _longitude);
+    }
+
+    function error(error) {
+        initMap();
+        console.log("Unable to retrieve your location due to " + error.code + ": " + error.message);
+    }
+
+    var geoOptions = {
+        enableHighAccuracy: true,
+        maximumAge: 30000,
+        timeout: 27000
+    };
+    
+    function initMap() {
+        createHomepageGoogleMap(_latitude,_longitude);
+        $(window).load(function(){
+            initializeOwl(false);
+        });
+    }
+    
+    geoFindMe();
 </script>
 </body>
 </html>

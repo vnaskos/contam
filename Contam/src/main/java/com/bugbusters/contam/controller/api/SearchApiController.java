@@ -7,9 +7,6 @@ package com.bugbusters.contam.controller.api;
 
 import com.bugbusters.contam.business.Business;
 import com.bugbusters.contam.business.BusinessDAOImpl;
-import com.bugbusters.contam.location.FindMyLocation;
-import com.bugbusters.contam.location.Ip;
-import com.bugbusters.contam.location.ServerLocation;
 import com.google.gson.Gson;
 import java.io.IOException;
 import java.io.PrintWriter;

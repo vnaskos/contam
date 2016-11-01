@@ -5,9 +5,8 @@
  */
 package com.bugbusters.contam.controller;
 
-import com.bugbusters.contam.location.FindMyLocation;
-import com.bugbusters.contam.location.Ip;
-import com.bugbusters.contam.location.ServerLocation;
+import com.bugbusters.contam.location.LocationFinder;
+import com.bugbusters.contam.location.Location;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -39,8 +38,9 @@ public class IndexController extends HttpServlet {
             request.setAttribute("latitude", request.getParameter("x"));
             request.setAttribute("longitude", request.getParameter("y"));
         } else {
-            String clientIP = Ip.getClientPublicIP();
-            ServerLocation location = FindMyLocation.getLocation(clientIP);
+            LocationFinder locationFinder = new LocationFinder();
+            String clientIP = locationFinder.getClientPublicIP();
+            Location location = locationFinder.getLocation(clientIP);
 
             double x = Double.parseDouble(location.getLatitude());
             double y = Double.parseDouble(location.getLongitude());

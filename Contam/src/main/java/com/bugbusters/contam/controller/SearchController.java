@@ -7,9 +7,8 @@ package com.bugbusters.contam.controller;
 
 import com.bugbusters.contam.business.Business;
 import com.bugbusters.contam.business.BusinessDAOImpl;
-import com.bugbusters.contam.location.FindMyLocation;
-import com.bugbusters.contam.location.Ip;
-import com.bugbusters.contam.location.ServerLocation;
+import com.bugbusters.contam.location.LocationFinder;
+import com.bugbusters.contam.location.Location;
 import java.io.IOException;
 import java.util.List;
 import javax.servlet.ServletException;
@@ -50,8 +49,9 @@ public class SearchController extends HttpServlet {
             x = Double.parseDouble(request.getParameter("x"));
             y = Double.parseDouble(request.getParameter("y"));
         } else {
-            String clientIP = Ip.getClientPublicIP();
-            ServerLocation location = FindMyLocation.getLocation(clientIP);
+            LocationFinder locationFinder = new LocationFinder();
+            String clientIP = locationFinder.getClientPublicIP();
+            Location location = locationFinder.getLocation(clientIP);
 
             x = Double.parseDouble(location.getLatitude());
             y = Double.parseDouble(location.getLongitude());
