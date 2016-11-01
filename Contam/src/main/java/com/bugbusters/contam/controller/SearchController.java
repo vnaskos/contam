@@ -60,20 +60,6 @@ public class SearchController extends HttpServlet {
         BusinessDAOImpl businessDAO = new BusinessDAOImpl();
         List<Business> results = businessDAO.searchBusiness(keyword, x, y);
         
-        String[] megaString = new String[results.size()];
-        
-        for ( int i = 0; i < results.size(); i++ )
-        {
-            megaString[i] = "<div class=\"col-md-3 col-sm-6\">"   + "<div class=\"property\">" + "<a href=\"property-detail.html\">"
-                + "<div class=\"property-image\">" + "<img alt=\"\" src=\"assets/img/properties/property-09.jpg\">" 
-                + "</div>" + "<div class=\"overlay\">" + "<div class=\"info\">" + "<h3>";
-            megaString[i] += results.get(i).getName();
-            megaString[i] += "</h3><figure>";
-            megaString[i] += results.get(i).getAddress();
-            megaString[i] += "</figure>" + "</div>" + "</div>" + "</a>" + "</div>" + "</div>";
-        }
-        
-        request.setAttribute("megaString", megaString);
         request.setAttribute("keyword", keyword);
         request.setAttribute("latitude", x);
         request.setAttribute("longitude", y);
