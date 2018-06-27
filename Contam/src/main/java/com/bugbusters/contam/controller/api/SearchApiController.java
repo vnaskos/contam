@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.bugbusters.contam.controller.api;
 
 import com.bugbusters.contam.business.Business;
@@ -18,11 +13,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-/**
- *
- * @author Vasilis Naskos <http://vnaskos.com>
- */
 @WebServlet(name = "SearchApiController", urlPatterns = {"/api/search"}, initParams = {
     @WebInitParam(name = "keyword", value = "business"),
     @WebInitParam(name = "x", value = "0.0"),
