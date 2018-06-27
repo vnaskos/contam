@@ -1,89 +1,20 @@
 package com.bugbusters.contam.controller;
 
-import com.bugbusters.contam.location.LocationFinder;
-import com.bugbusters.contam.location.Location;
-import java.io.IOException;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
-/**
- *
- * @author Vasilis Naskos
- */
-@WebServlet(name = "IndexController", urlPatterns = {"/index"})
-public class IndexController extends HttpServlet {
+@Controller
+public class IndexController {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        
-        if(request.getParameter("x") != null && request.getParameter("y") != null) {
-            request.setAttribute("latitude", request.getParameter("x"));
-            request.setAttribute("longitude", request.getParameter("y"));
-        } else {
-            LocationFinder locationFinder = new LocationFinder();
-            String clientIP = locationFinder.getClientPublicIP();
-            Location location = locationFinder.getLocation(clientIP);
-
-            double x = Double.parseDouble(location.getLatitude());
-            double y = Double.parseDouble(location.getLongitude());
-
-            request.setAttribute("latitude", x);
-            request.setAttribute("longitude", y);
-        }
-        
-        request.getRequestDispatcher("/index.jsp").forward(request, response);
+    @GetMapping("/index")
+    public String index(Model model,
+                        @RequestParam(value = "x", required = false, defaultValue = "0") String x,
+                        @RequestParam(value = "y", required = false, defaultValue = "0") String y) {
+        model.addAttribute("latitude", x);
+        model.addAttribute("longitude", y);
+        return "index";
     }
-
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
-
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
-
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
 
 }

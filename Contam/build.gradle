@@ -39,7 +39,10 @@ dependencies {
     compile("com.google.code.gson:gson:2.7")
     compile("com.google.maps:google-maps-services:0.1.16")
     compile("com.maxmind.geoip:geoip-api:1.2.10")
-    compile("jstl:jstl:1.2")
+    compile("javax.servlet:jstl")
+
+    runtime("org.springframework.boot:spring-boot-starter-tomcat")
+    runtime("org.apache.tomcat.embed:tomcat-embed-jasper")
 
     testCompile("junit:junit")
     testCompile("org.springframework.boot:spring-boot-starter-test")

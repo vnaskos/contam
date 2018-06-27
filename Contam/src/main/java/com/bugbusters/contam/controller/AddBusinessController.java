@@ -38,8 +38,8 @@ public class AddBusinessController extends HttpServlet {
         business.setLongitude(Double.parseDouble(longitude));
         business.setDescription(description);
         
-        BusinessDAOImpl businessDAO = new BusinessDAOImpl();
-        businessDAO.addBusiness(business);
+//        BusinessDAOImpl businessDAO = new BusinessDAOImpl();
+//        businessDAO.addBusiness(business);
         
         request.getRequestDispatcher("/index").forward(request, response);
     }
