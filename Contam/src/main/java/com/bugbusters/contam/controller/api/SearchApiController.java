@@ -1,7 +1,7 @@
 package com.bugbusters.contam.controller.api;
 
-import com.bugbusters.contam.business.Business;
-import com.bugbusters.contam.business.BusinessDAOImpl;
+import com.bugbusters.contam.orm.business.BusinessDTO;
+import com.bugbusters.contam.orm.business.BusinessDAOImpl;
 import com.google.gson.Gson;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -40,7 +40,7 @@ public class SearchApiController extends HttpServlet {
         double y = Double.parseDouble(yStr);
         
         BusinessDAOImpl businessDAO = new BusinessDAOImpl();
-        List<Business> resutls = businessDAO.searchBusiness(keyword, x, y);
+        List<BusinessDTO> resutls = businessDAO.searchBusiness(keyword, x, y);
         
         String json = new Gson().toJson(resutls);
         

@@ -1,7 +1,7 @@
 package com.bugbusters.contam.controller;
 
-import com.bugbusters.contam.business.Business;
-import com.bugbusters.contam.business.BusinessDAOImpl;
+import com.bugbusters.contam.orm.business.BusinessDTO;
+import com.bugbusters.contam.orm.business.BusinessDAOImpl;
 import com.bugbusters.contam.location.LocationFinder;
 import com.bugbusters.contam.location.Location;
 import java.io.IOException;
@@ -53,7 +53,7 @@ public class SearchController extends HttpServlet {
         }
         
         BusinessDAOImpl businessDAO = new BusinessDAOImpl();
-        List<Business> results = businessDAO.searchBusiness(keyword, x, y);
+        List<BusinessDTO> results = businessDAO.searchBusiness(keyword, x, y);
         
         request.setAttribute("keyword", keyword);
         request.setAttribute("latitude", x);

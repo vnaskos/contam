@@ -1,9 +1,8 @@
 package com.bugbusters.contam.controller;
 
-import com.bugbusters.contam.business.Business;
-import com.bugbusters.contam.business.BusinessDAOImpl;
+import com.bugbusters.contam.orm.business.BusinessDTO;
+import com.bugbusters.contam.orm.business.BusinessDAOImpl;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -32,7 +31,7 @@ public class AddBusinessController extends HttpServlet {
         String longitude = request.getParameter("longitude");
         String description = request.getParameter("description");
         
-        Business business = new Business();
+        BusinessDTO business = new BusinessDTO();
         business.setName(name);
         business.setAddress(address);
         business.setLatitude(Double.parseDouble(latitude));
