@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.IOException;
 import com.maxmind.geoip.LookupService;
 import com.maxmind.geoip.regionName;
+import org.springframework.stereotype.Component;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
@@ -15,6 +17,7 @@ import java.util.logging.Logger;
  *
  * @author Vavouraz
  */
+@Component
 public class LocationFinder {
 
     /**
