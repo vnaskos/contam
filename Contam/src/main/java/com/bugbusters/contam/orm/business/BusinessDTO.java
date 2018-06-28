@@ -3,7 +3,7 @@ package com.bugbusters.contam.orm.business;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Business")
+@Table(name = "business")
 public class BusinessDTO {
 
     @Id
@@ -20,11 +20,11 @@ public class BusinessDTO {
     @Column(name = "description")
     private String description;
 
-    @Column(name = "longitude")
-    private Double longitude;
-
     @Column(name = "latitude")
     private Double latitude;
+
+    @Column(name = "longitude")
+    private Double longitude;
 
     @Column(name = "postal_code")
     private String postalCode;
