@@ -3,7 +3,7 @@ package com.bugbusters.contam.controller;
 import com.bugbusters.contam.location.Location;
 import com.bugbusters.contam.location.LocationFinder;
 import com.bugbusters.contam.orm.business.BusinessDTO;
-import com.bugbusters.contam.orm.business.BusinessRepo;
+import com.bugbusters.contam.orm.business.BusinessService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,7 +15,7 @@ import java.util.List;
 @Controller
 public class SearchController {
 
-    private BusinessRepo businessRepo;
+    private BusinessService businessService;
 
     private LocationFinder locationFinder;
 
@@ -35,7 +35,7 @@ public class SearchController {
             longitude = Double.parseDouble(userLocation.getLongitude());
         }
 
-        List<BusinessDTO> businesses = businessRepo.find(keyword, latitude, longitude);
+        List<BusinessDTO> businesses = businessService.searchNearbyBusinesses(keyword, latitude, longitude);
         model.addAttribute("latitude", latitude);
         model.addAttribute("longitude", longitude);
         model.addAttribute("results", businesses);
@@ -44,8 +44,8 @@ public class SearchController {
     }
 
     @Autowired
-    public void setBusinessRepo(BusinessRepo businessRepo) {
-        this.businessRepo = businessRepo;
+    public void setBusinessService(BusinessService businessService) {
+        this.businessService = businessService;
     }
 
     @Autowired
